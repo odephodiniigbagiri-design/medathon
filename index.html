@@ -17,15 +17,15 @@ canvas{position:fixed;inset:0;width:100%;height:100%}
 #pad{position:fixed;left:0;right:0;bottom:calc(env(safe-area-inset-bottom,0px) + 8px);display:flex;justify-content:space-between;align-items:flex-end;padding:0 12px;pointer-events:none}
 #pl{display:flex;flex-direction:column;align-items:flex-start;gap:6px;pointer-events:none}#pl>*{pointer-events:auto}
 #bt{padding:4px 10px;font-size:11px;line-height:1.15;height:auto;border-radius:14px}
-#wheel{width:clamp(80px,min(28vh,28vw),130px);aspect-ratio:1;border-radius:50%;touch-action:none}
+#wheel{width:clamp(92px,min(33vh,33vw),152px);aspect-ratio:1;border-radius:50%;touch-action:none}
 #wheel svg{width:100%;height:100%;display:block;filter:drop-shadow(0 4px 8px #000a);pointer-events:none}
 #pr{display:flex;gap:10px;align-items:flex-end;pointer-events:none}
-.pedal{pointer-events:auto;position:relative;width:clamp(40px,10.5vh,58px);border-radius:12px;border:2px solid #18181b;background:linear-gradient(#52525b,#2c2c31);box-shadow:0 4px 0 #0a0a0c,0 6px 14px #000a;touch-action:none;overflow:hidden;transition:transform .05s,box-shadow .05s}
-.pedal::before{content:"";position:absolute;inset:8% 14% auto;height:46%;background:radial-gradient(circle,#e4e4e7 2px,transparent 2.5px) 0 0/11px 11px}
+.pedal{pointer-events:auto;position:relative;width:clamp(46px,12.5vh,68px);border-radius:12px;border:2px solid #18181b;background:linear-gradient(#52525b,#2c2c31);box-shadow:0 4px 0 #0a0a0c,0 6px 14px #000a;touch-action:none;overflow:hidden;transition:transform .05s,box-shadow .05s}
+.pedal::before{content:"";position:absolute;inset:8% 14% auto;height:46%;background:radial-gradient(circle,#e4e4e7 2px,transparent 2.5px) 0 0/13px 13px}
 .pedal::after{content:"";position:absolute;inset:auto 14% 7%;height:34%;border-radius:4px}
-#bg{height:clamp(76px,25vh,118px)}#bb{height:clamp(50px,15vh,78px)}
-#bg::after{background:repeating-linear-gradient(#e4e4e7 0 5px,transparent 5px 11px)}
-#bb::after{background:repeating-linear-gradient(135deg,#e4e4e7 0 5px,transparent 5px 11px)}
+#bg{height:clamp(88px,30vh,138px)}#bb{height:clamp(58px,18vh,92px)}
+#bg::after{background:repeating-linear-gradient(#e4e4e7 0 6px,transparent 6px 13px)}
+#bb::after{background:repeating-linear-gradient(135deg,#e4e4e7 0 6px,transparent 6px 13px)}
 .pedal.on{transform:translateY(5px);box-shadow:0 1px 0 #0a0a0c,0 4px 10px #000a}
 #bg.on{border-color:#22c55e}#bb.on{border-color:#ef4444}
 
@@ -58,14 +58,14 @@ h1{margin:0;font-size:clamp(28px,7vw,46px)}p{margin:0;color:var(--mu)}
 </style><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0b1220"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="apple-touch-icon" href="icon-192.png"><link rel="icon" href="icon-192.png">
 </head><body>
 <canvas id="c"></canvas>
-<div id="hud" class="ov" hidden><span id="lv"></span><span id="qn"></span><span id="tm"></span><span id="sc"></span><span id="spd"></span><span><button class="hb" id="vw">🧑‍✈️</button> <button class="hb" id="fs">⛶</button> <button class="hb" id="sn">🔔</button> <button class="hb" id="vo">🔊</button> <button class="hb" id="ps">⏸</button></span></div>
+<div id="hud" class="ov" hidden><span id="lv"></span><span id="qn"></span><span id="tm"></span><span id="sc"></span><span id="spd"></span><span><button class="hb" id="vw" hidden>🧑‍✈️</button> <button class="hb" id="fs">⛶</button> <button class="hb" id="sn">🔔</button> <button class="hb" id="vo">🔊</button> <button class="hb" id="ps">⏸</button></span></div>
 <div id="qb" class="ov" hidden><div id="qt"></div><div id="bar"><i id="bi"></i></div></div>
 <div id="cd" class="ov"></div><div id="ft" class="ov"></div>
 <div id="pad" hidden>
 <div id="pl"><button class="b" id="bt">TILT<br>off</button><div id="wheel" aria-label="Steering wheel"><svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="86" fill="none" stroke="#141416" stroke-width="22"/><circle cx="100" cy="100" r="86" fill="none" stroke="#4b4b52" stroke-width="3" stroke-dasharray="3 6"/><rect x="96" y="6" width="8" height="22" rx="2" fill="#ef4444"/><path d="M26 110 L174 110 L162 132 L38 132Z" fill="#d4d4d8"/><path d="M86 128 L114 128 L122 178 L78 178Z" fill="#d4d4d8"/><rect x="46" y="114" width="18" height="12" rx="3" fill="#27272a"/><rect x="136" y="114" width="18" height="12" rx="3" fill="#27272a"/><circle cx="100" cy="108" r="27" fill="#18181b" stroke="#f4f4f5" stroke-width="5"/></svg></div></div>
 <div id="pr"><div class="pedal" id="bb" aria-label="Brake"></div><div class="pedal" id="bg" aria-label="Gas"></div></div></div>
 <div id="menu" class="scr"><h1>🏎️ Medathon</h1><p>Ride the desert. Learn medicine. Pick a kingdom:</p>
-<div class="row"><button class="v on" id="v1">🚗 Chase view</button><button class="v" id="v2">🧑‍✈️ Cockpit view</button></div><div class="row"><button class="v" id="fsm">⛶ Fullscreen</button><button class="v" id="inst" hidden>📲 Install app</button><button class="v" id="opn" hidden>↗ Open full page</button></div><button class="go" id="play">▶ &nbsp; PLAY</button><div id="ks"></div><p id="msg"></p><p>Hold GAS and steer so you drive under the floating answer you think is right. Steer with the on-screen wheel (or tilt / arrow keys); the long pedal is gas and the short one is brake. Play with your phone turned sideways (landscape). Turn your sound on for voice questions. Stay above 72 km/h or you won't reach the answers before the timer ends. The race lasts 5 minutes; more than 5 wrong answers ends it early.</p></div>
+<div class="row" hidden><button class="v on" id="v1">🚗 Chase view</button><button class="v" id="v2">🧑‍✈️ Cockpit view</button></div><div class="row"><button class="v" id="fsm">⛶ Fullscreen</button><button class="v" id="inst" hidden>📲 Install app</button><button class="v" id="opn" hidden>↗ Open full page</button></div><button class="go" id="play">▶ &nbsp; PLAY</button><div id="ks"></div><p id="msg"></p><p>Hold GAS and steer so you drive under the floating answer you think is right. Steer with the on-screen wheel (or tilt / arrow keys); the long pedal is gas and the short one is brake. Play with your phone turned sideways (landscape). Turn your sound on for voice questions. Stay above 72 km/h or you won't reach the answers before the timer ends. The race lasts 5 minutes; more than 5 wrong answers ends it early.</p></div>
 <div id="envs" class="scr" hidden><h1>🌦️ Choose conditions</h1><p>When do you want to race?</p><div class="cards" id="ec"></div><button class="v" id="eb">◀ Back</button></div>
 <div id="cars" class="scr" hidden><h1>🚘 Choose your car</h1><div class="cards" id="cc"></div><button class="v" id="cb">◀ Back</button></div>
 <div id="pause" class="scr" hidden><h1>⏸ Paused</h1><div class="row"><button class="go" id="rs">Resume</button><button class="v" id="qu">Quit</button></div></div>
