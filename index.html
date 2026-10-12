@@ -145,6 +145,53 @@ button{-webkit-appearance:none;appearance:none;font-family:inherit}
 .wb small{display:block;font-size:.62em;font-weight:600;opacity:.85}
 .go2 .how{max-width:none;color:#cbd5e1;font-size:12px;font-size:clamp(12px,3.3vh,16px);line-height:1.4;text-align:left}
 .go2 .fr{margin-top:auto}
+
+input,select,textarea{-webkit-user-select:text;user-select:text}
+.pf,.pv{background:radial-gradient(ellipse at 50% 0,#4a2a0a 0,#1a0f06 55%,#0b0704 100%);justify-content:flex-start;gap:8px;padding:6px 8px 8px}
+.pf>:first-child,.pv>:first-child{margin-top:0}.pf>:last-child,.pv>:last-child{margin-bottom:0}
+.pft{font-size:16px;font-size:clamp(16px,5vh,26px);font-weight:900;letter-spacing:3px;color:#fbbf24;text-shadow:0 0 12px #f59e0b88;padding-top:calc(env(safe-area-inset-top,0px) + 2px)}
+.pfs{display:flex;width:900px;width:min(900px,96vw);flex:1 1 0;min-height:0;overflow-y:auto;touch-action:pan-y;text-align:left}
+.pfa{flex:0 0 96px;flex:0 0 clamp(96px,22vw,150px);display:flex;flex-direction:column;align-items:center;margin-right:14px}
+.pfav{width:64px;width:clamp(64px,22vh,110px);height:64px;height:clamp(64px,22vh,110px);border-radius:50%;border:3px solid #f59e0b;background:#140c05;overflow:hidden;box-shadow:0 0 18px #f59e0b66;margin-bottom:6px}
+.pfav svg,.pfav img,.pvav svg,.pvav img,#mpf svg,#mpf img{width:100%;height:100%;object-fit:cover;display:block}
+.pfh{display:grid;grid-template-columns:repeat(3,1fr);grid-gap:4px;gap:4px;margin-bottom:6px}
+.pfhb{width:30px;width:clamp(30px,9vh,44px);height:30px;height:clamp(30px,9vh,44px);border-radius:50%;border:2px solid #5b4326;background:#140c05;padding:2px;overflow:hidden}
+.pfhb svg{width:100%;height:100%;display:block}.pfhb.on{border-color:#fbbf24;box-shadow:0 0 8px #fbbf24aa}
+.pfu{font-size:11px;font-weight:700;color:#fbbf24;border:1px dashed #b45309;padding:5px 8px;border-radius:8px;text-align:center}
+.pff{flex:1;display:grid;grid-template-columns:1fr 1fr;grid-gap:6px 10px;gap:6px 10px;align-content:start}
+.pff label{font-size:10px;letter-spacing:1px;color:#d6a45a;font-weight:700;display:block}
+.pff input[type=text],.pff input[type=email],.pff input[type=tel],.pff select{width:100%;box-sizing:border-box;margin-top:2px;height:32px;height:clamp(32px,9vh,38px);background:#120b05;color:#fff;border:1px solid #7c4a12;border-radius:6px;padding:0 8px;font-size:16px}
+.pff .wide{grid-column:1/-1}
+.pff .chk{display:flex;align-items:flex-start;font-size:11px;font-weight:500;letter-spacing:0;color:#c9b79c}
+.pff .chk input{width:20px;height:20px;margin:0 8px 0 0;flex:none}
+.pfx{width:900px;width:min(900px,96vw);display:flex;align-items:center;justify-content:flex-end}
+#pfe{flex:1;color:#f87171;font-weight:700;font-size:12px;text-align:left;margin-right:8px}
+.pgo{background:linear-gradient(#fb923c,#ea580c);color:#fff;border:0;border-radius:10px;font-weight:900;letter-spacing:2px;padding:8px 20px;padding:clamp(8px,2vh,12px) clamp(20px,6vw,40px);font-size:14px;font-size:clamp(14px,3.6vh,20px);box-shadow:0 4px 0 #9a3412}
+.pcl{background:#1f1409;color:#fbbf24;border:1px solid #7c4a12;border-radius:10px;font-weight:800;letter-spacing:1px;padding:8px 14px;font-size:13px;margin-left:8px}
+.pvh{display:flex;align-items:center;justify-content:space-between;width:980px;width:min(980px,96vw);padding-top:calc(env(safe-area-inset-top,0px) + 2px)}
+.pvt{font-size:14px;font-size:clamp(14px,4.4vh,24px);font-weight:900;letter-spacing:3px;color:#fbbf24;text-shadow:0 0 12px #f59e0b88}
+.pvh .gb{border:2px solid #7c4a12;border-radius:10px;background:#1f1409;padding:0 12px;height:34px}
+.pvs{width:980px;width:min(980px,96vw);flex:1 1 0;min-height:0;overflow-y:auto;touch-action:pan-y;display:flex;flex-direction:column;gap:12px;text-align:left;padding-top:8px}
+.pvid{display:flex;align-items:center;background:rgba(20,12,6,.66);border:1px solid #b4530977;border-radius:10px;padding:6px 10px}
+.pvav{width:48px;width:clamp(48px,16vh,72px);height:48px;height:clamp(48px,16vh,72px);border-radius:50%;border:3px solid #f59e0b;background:#140c05;overflow:hidden;box-shadow:0 0 14px #f59e0b66;margin-right:12px;flex:none}
+.pvin{flex:1;min-width:0}.pvin b{font-size:18px;font-size:clamp(18px,5.4vh,30px);font-weight:900;color:#fff;display:block}
+.pvin span{display:block;font-size:12px;color:#d6c4a8;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pvlv{text-align:center;background:#7c2d12;border:2px solid #fb923c;border-radius:10px;padding:4px 14px;margin-left:8px}
+.pvlv b{font-size:20px;font-size:clamp(20px,6vh,32px);display:block;line-height:1;color:#fff}.pvlv small{font-size:9px;letter-spacing:2px;color:#fed7aa}
+.pvg{display:grid;grid-template-columns:1.1fr 1.3fr 1fr;grid-gap:10px;gap:10px}
+.pvp{position:relative;background:rgba(20,12,6,.66);border:2px solid #b45309aa;border-radius:6px;padding:16px 10px 8px;box-shadow:inset 0 0 16px #f59e0b22}
+.pvp h4{position:absolute;top:-9px;left:50%;transform:translateX(-50%);margin:0;background:#2b1a0a;border:1px solid #b45309;border-radius:4px;padding:1px 10px;font-size:10px;letter-spacing:1.5px;color:#fbbf24;white-space:nowrap}
+.pk{font-size:10px;letter-spacing:1px;color:#d6a45a;font-weight:700;display:block}
+.pn2{font-size:16px;font-size:clamp(16px,4.6vh,26px);font-weight:900;color:#fff;line-height:1.1}
+.xb{height:8px;background:#33261a;border-radius:4px;overflow:hidden;margin:4px 0 2px}.xb i{display:block;height:100%;background:linear-gradient(90deg,#f59e0b,#fb923c)}
+.pcar{display:flex;align-items:center;margin-top:6px}.pcar img{width:64px;height:auto;margin-right:8px}
+.pst{display:grid;grid-template-columns:1fr 1fr;grid-gap:8px;gap:8px}
+.gau{width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.gau span{width:40px;height:40px;border-radius:50%;background:#1b110a;display:flex;align-items:center;justify-content:center;font-weight:900;color:#4ade80;font-size:12px}
+.lockrow{margin-top:8px;padding:5px 8px;border:1px dashed #7c4a12;border-radius:6px;font-size:11px;color:#9b8365}.lockrow b{color:#d6a45a}
+.pvsg{display:grid;grid-template-columns:repeat(4,1fr);grid-gap:8px;gap:8px}.pvsg div{opacity:.75}.pvsg b{display:block;font-size:12px;color:#d6a45a}
+#mpf{padding:0;overflow:hidden;border-radius:50%;border:2px solid #f59e0b;background:#140c05;width:40px;height:40px;font-size:18px;color:#fff}
+.gtr{display:flex;align-items:center}.gtr>*+*{margin-left:8px}
 </style><meta name="author" content="Eghuan Ventures"><meta name="copyright" content="© 2026 Eghuan Ventures. All rights reserved."><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0b1220"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="apple-touch-icon" href="icon-192.png"><link rel="icon" href="icon-192.png">
 <script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script><script defer src="/_vercel/insights/script.js"></script>
 </head><body>
@@ -163,10 +210,26 @@ button{-webkit-appearance:none;appearance:none;font-family:inherit}
 <div class="tp" id="op1"><div class="wg"><button class="wb" id="osn"></button><button class="wb" id="ovo"></button><button class="wb" id="omu"></button><button class="wb" id="fsm">⛶ Fullscreen</button><button class="wb" id="inst" hidden>📲 Install app</button><button class="wb" id="opn" hidden>↗ Open full page</button></div><p class="ft2" id="mst"></p><p class="ft2" id="msg2"></p></div>
 <div class="tp" id="op2" hidden><p class="how">Hold the long pedal (GAS) and steer with the wheel so you drive under the floating answer you think is right. Stay above 72 km/h or you won't reach the answers before the timer ends. Each level has a time limit (3 minutes for Intro to Anatomy, 5 minutes for the next levels) and more than 5 wrong answers ends it early. Turn your sound on for voice questions and play with your phone in landscape.</p></div>
 <div class="fr"><img class="brand" alt="Eghuan Ventures" draggable="false"><span class="ft2">© 2026 Eghuan Ventures. All rights reserved.</span></div></div>
-<div id="mm" class="scr gar" hidden><div class="gtop"><div class="gl"><button class="bk" id="mb">◀</button><div><b class="mt">MAIN MENU</b><small id="tp"></small></div></div><div class="stat"><span>🏆 Best <b class="bsv">0</b></span><span>⏱ <b id="tl">5:00</b> race</span></div><button class="bk" id="mo">⚙️</button></div>
+<div id="mm" class="scr gar" hidden><div class="gtop"><div class="gl"><button class="bk" id="mb">◀</button><div><b class="mt">MAIN MENU</b><small id="tp"></small></div></div><div class="stat"><span>🏆 Best <b class="bsv">0</b></span><span>⏱ <b id="tl">5:00</b> race</span></div><div class="gtr"><button class="bk" id="mpf" aria-label="Profile"></button><button class="bk" id="mo">⚙️</button></div></div>
 <button class="ar" id="cl">◀</button><canvas id="mc" width="560" height="300"></canvas><button class="ar" id="cr">▶</button><div id="cn"></div>
 <div class="gbl"><div class="tile"><small>WEATHER</small><div><button class="wc" data-e="day">☀️</button><button class="wc" data-e="night">🌙</button><button class="wc" data-e="rain">🌧️</button></div></div><button class="tile" id="gg"><span>🚘</span><small>GARAGE</small></button></div>
 <button id="play">PLAY&nbsp;▶</button><div hidden><button id="v1"></button><button id="v2"></button><div id="ks"></div></div></div>
+<div id="pfc" class="scr pf" hidden><div class="pft" id="pfct">CREATE YOUR PROFILE</div>
+<div class="pfs"><div class="pfa"><div class="pfav" id="pfav"></div><div class="pfh" id="pfh"></div><label class="pfu">Upload photo<input type="file" id="pfp" accept="image/*" hidden></label></div>
+<div class="pff"><label>USERNAME<input type="text" id="pf_u" maxlength="16" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="e.g. Dr_Desert_Drift"></label><label>COUNTRY<select id="pf_c"></select></label>
+<label>UNIVERSITY / SCHOOL<input type="text" id="pf_n" maxlength="60" autocomplete="off"></label><label>YEAR OF STUDY<select id="pf_y"></select></label>
+<label>EMAIL<input type="email" id="pf_e" inputmode="email" autocomplete="off" autocapitalize="off"></label><label>PHONE NUMBER<input type="tel" id="pf_t" inputmode="tel" autocomplete="off"></label>
+<label class="wide">SHORT BIO (optional)<input type="text" id="pf_b" maxlength="80" autocomplete="off"></label>
+<label class="chk wide"><input type="checkbox" id="pf_k"><span>I agree that Medathon may contact me about updates. My details stay on this phone for now and are never shown on my public profile.</span></label></div></div>
+<div class="pfx"><span id="pfe"></span><button class="pgo" id="pfsv">START</button><button class="pcl" id="pfcn" hidden>CANCEL</button></div></div>
+<div id="pfv" class="scr pv" hidden><div class="pvh"><button class="gb" id="pvb">&#8249;</button><div class="pvt">PLAYER PROFILE</div><button class="pcl" id="pved">EDIT</button></div>
+<div class="pvs"><div class="pvid"><div class="pvav" id="pvav"></div><div class="pvin"><b id="pvu"></b><span id="pvbio"></span><span id="pvc"></span></div><div class="pvlv"><b id="pvl">1</b><small>LEVEL</small></div></div>
+<div class="pvg"><section class="pvp"><h4>PROGRESS &amp; REWARDS</h4><span class="pk">MEDICAL STANDING</span><div class="pn2" id="pvst"></div><span class="pk" style="margin-top:6px" id="pvyr"></span><div class="xb"><i id="pvxb"></i></div><span class="pk" id="pvxt"></span>
+<div class="lockrow">CURRENT BATTLE PASS: <b>Coming soon</b></div><div class="pcar"><img id="pvcar" alt=""><div><span class="pk">CURRENT CAR</span><b id="pvcn" style="font-size:12px"></b></div></div></section>
+<section class="pvp"><h4>PERFORMANCE STATISTICS</h4><div class="pst"><div><span class="pk">TOP SPEED</span><div class="pn2"><span id="pvtop">0</span> <small style="font-size:10px">KM/H</small></div></div><div><span class="pk">HIGHEST SCORE</span><div class="pn2">&#9733; <span id="pvbest">0</span></div></div>
+<div><span class="pk">ANATOMY ACCURACY</span><div class="gau" id="pvacc"><span id="pvaccn">0%</span></div></div><div><span class="pk">WINS / LOSSES</span><div class="pn2"><span style="color:#4ade80" id="pvw">0</span> / <span style="color:#f87171" id="pvls">0</span></div><span class="pk" id="pvrc"></span></div></div></section>
+<section class="pvp"><h4>BIO &amp; RECRUITS</h4><span class="pk">SHORT BIO</span><div id="pvbio2" style="font-size:12px;color:#e7d9c3;margin-bottom:6px"></div><div class="lockrow">RECRUITS (people you shared to): <b>Coming soon</b></div></section></div>
+<section class="pvp"><h4>SOCIAL HUB</h4><div class="pvsg"><div><span class="pk">FRIEND STATUS</span><b>Coming soon</b></div><div><span class="pk">CURRENT PARTY</span><b>Coming soon</b></div><div><span class="pk">GUILD</span><b>Coming soon</b></div><div><span class="pk">RECENT CLIP</span><b>Coming soon</b></div></div></section></div></div>
 <div id="envs" class="scr" hidden><h1>🌦️ Choose conditions</h1><p>When do you want to race?</p><div class="cards" id="ec"></div><button class="v" id="eb">◀ Back</button></div>
 <div id="cars" class="scr" hidden><h1>🚘 Choose your car</h1><div class="cards" id="cc"></div><button class="v" id="cb">◀ Back</button></div>
 <div id="pause" class="scr pm" hidden><div class="pmw"><div class="pmt">PAUSE MENU</div><div class="pmb"><div class="pmy"></div><b class="pmh">PAUSED</b><div class="pmg"><small>🎯 Answer right to win the race</small><b id="pmn">INTRO TO ANATOMY</b></div><div class="pmr"><button id="rs">Resume</button><button id="rst">Restart</button><button id="pmo">Options</button><button id="qu">Quit race</button></div></div></div></div>
@@ -302,18 +365,18 @@ function hold(id,k){const e=$(id);e.onpointerdown=v=>{v.preventDefault();F[k]=1;
 [['bg','G'],['bb','B']].forEach(a=>hold(...a));
 const KM={ArrowLeft:'L',a:'L',ArrowRight:'R',d:'R',ArrowUp:'G',w:'G',ArrowDown:'B',s:'B',' ':'S'};
 const kn=e=>e.key.length>1?e.key:e.key.toLowerCase();
-addEventListener('keydown',e=>{const k=kn(e);if(KM[k]){F[KM[k]]=1;e.preventDefault()}if((k=='p'||k=='Escape')&&!e.repeat)pz(!g.pz)});addEventListener('keyup',e=>{const k=kn(e);if(KM[k]){F[KM[k]]=0;e.preventDefault()}});
-addEventListener('contextmenu',e=>e.preventDefault());document.addEventListener('click',()=>{const a=document.activeElement;a&&a.blur&&a.blur()});
+addEventListener('keydown',e=>{if(e.target&&/^(INPUT|SELECT|TEXTAREA)$/.test(e.target.tagName))return;const k=kn(e);if(KM[k]){F[KM[k]]=1;e.preventDefault()}if((k=='p'||k=='Escape')&&!e.repeat)pz(!g.pz)});addEventListener('keyup',e=>{if(e.target&&/^(INPUT|SELECT|TEXTAREA)$/.test(e.target.tagName))return;const k=kn(e);if(KM[k]){F[KM[k]]=0;e.preventDefault()}});
+addEventListener('contextmenu',e=>{if(!(e.target&&/^(INPUT|TEXTAREA)$/.test(e.target.tagName)))e.preventDefault()});document.addEventListener('click',()=>{const a=document.activeElement;a&&a.blur&&!/^(INPUT|SELECT|TEXTAREA)$/.test(a.tagName)&&a.blur()});
 document.addEventListener('visibilitychange',()=>{if(document.hidden)pz(1)});
 let tOn=0;$('bt').onclick=async()=>{if(!tOn){try{if(window.DeviceOrientationEvent&&DeviceOrientationEvent.requestPermission&&await DeviceOrientationEvent.requestPermission()!='granted')return;addEventListener('deviceorientation',e=>{const a=(screen.orientation&&screen.orientation.angle)||0;tv=cl((a==90?e.beta:a==270?-e.beta:e.gamma)/22,-1,1)});tOn=1}catch(_){return}}tilt=!tilt;$('bt').innerHTML='TILT<br>'+(tilt?'on':'off')};
-function start(){mus.ri++;mus.sv=null;try{const d=document.documentElement;(d.requestFullscreen?d.requestFullscreen():Promise.reject()).then(()=>screen.orientation.lock('landscape')).catch(()=>{})}catch(_){}snd.ctx();wr=0;wh=0;if(SS){SS.cancel();const u=new SpeechSynthesisUtterance(' ');u.volume=0;SS.speak(u)}g={ph:'cd',cd:3.99,t:0,qi:0,qs:0,sc:0,px:1.5,sp:.4,sm:0,dist:0,J:L+CAR_Z,old:null,mx:null,miss:[],fb:'',ft:0,pz:0,ln:0,deck:shuf(TOPICS[topic].q.slice())};$('ft').textContent='';gameManager.timeLimit=TOPICS[topic].time;gameManager.reset();roadSpawner.reset(g.dist);st='race';['menu','topics','options','mm','envs','cars','end','pause'].forEach(i=>$(i).hidden=true);$('hud').hidden=$('pad').hidden=false;$('qb').hidden=true}
+function start(){mus.ri++;mus.sv=null;runTop=0;try{const d=document.documentElement;(d.requestFullscreen?d.requestFullscreen():Promise.reject()).then(()=>screen.orientation.lock('landscape')).catch(()=>{})}catch(_){}snd.ctx();wr=0;wh=0;if(SS){SS.cancel();const u=new SpeechSynthesisUtterance(' ');u.volume=0;SS.speak(u)}g={ph:'cd',cd:3.99,t:0,qi:0,qs:0,sc:0,px:1.5,sp:.4,sm:0,dist:0,J:L+CAR_Z,old:null,mx:null,miss:[],fb:'',ft:0,pz:0,ln:0,deck:shuf(TOPICS[topic].q.slice())};$('ft').textContent='';gameManager.timeLimit=TOPICS[topic].time;gameManager.reset();roadSpawner.reset(g.dist);st='race';['menu','topics','options','mm','envs','cars','pfc','pfv','end','pause'].forEach(i=>$(i).hidden=true);$('hud').hidden=$('pad').hidden=false;$('qb').hidden=true}
 function newQ(){g.q=g.deck[g.qi%g.deck.length];g.o=shuf([0,1,2,3]);g.cl=g.o.indexOf(0);g.qs=g.t;$('qt').textContent=g.q[0];say(g.fb+' '+g.q[0],1);g.fb=''}
 function toast(t,c){$('ft').textContent=t;$('ft').style.color=c;g.ft=1.6}
 function ev(ok,pts,slow){snd.sfx(slow?'slow':ok?'ok':'bad');gameManager.record(ok);
  if(ok){g.sc+=pts;toast('✓ Correct! +'+pts,'#4ade80');g.fb='Correct.'}
  else{toast((slow?'⏱ Too slow! Answer: ':'✗ Wrong road. Answer: ')+g.q[1],'#f87171');g.fb=(slow?'Too slow. ':'Wrong. ')+g.q[1]+'.';if(!g.miss.includes(g.q))g.miss.push(g.q);g.deck.splice(g.qi+4,0,g.q)}}
 function fin(w){snd.sfx(w?'win':'lose');st='end';if(SS)SS.cancel();$('pad').hidden=$('hud').hidden=$('qb').hidden=true;tx('cd','');$('end').hidden=false;
- const m=gameManager,n=m.answered,nb=g.sc>best;if(nb){best=g.sc;try{localStorage.setItem('medBest',best)}catch(_){}}
+ const m=gameManager,n=m.answered,nb=g.sc>best;profRec(w,m,n);if(nb){best=g.sc;try{localStorage.setItem('medBest',best)}catch(_){}}
  let nw=0;if(w&&!done.includes(topic)){done.push(topic);try{localStorage.setItem('medDone',JSON.stringify(done))}catch(_){}nw=1;buildTopics()}
  const nt=topic+1,cn=w&&nt<TOPICS.length&&open_(nt);$('un').textContent=nw&&cn?'🔓 New level unlocked: '+KS[nt]:'';$('nx').hidden=!cn;
  $('et').textContent=w?'🏁 Race complete!':'💥 Too many wrong answers';
@@ -349,7 +412,7 @@ function upd(dt){snd.tick();mus.tick(dt);wheelTick(dt);rotChk();
  }
  const m=gameManager,r=Math.ceil(m.timeLeft),bp=Math.round(cl(1-(g.t-g.qs)/QT,0,1)*100);
  tx('lv',`✗ ${m.missed}/${m.maxMisses}`);tx('qn',g.ph=='run'?`Q ${g.qi+1} · ✓ ${m.correct}`:`✓ ${m.correct}`);
- tx('tm',Math.floor(r/60)+':'+String(r%60).padStart(2,'0'));tx('sc','★ '+g.sc);tx('spd',Math.round(g.sp*120)+' km/h');$('spd').style.color=g.ph=='run'&&g.sp<.599?'#f87171':'';
+ tx('tm',Math.floor(r/60)+':'+String(r%60).padStart(2,'0'));tx('sc','★ '+g.sc);tx('spd',Math.round(g.sp*120)+' km/h');if(g.ph=='run'&&g.sp*120>runTop)runTop=Math.round(g.sp*120);$('spd').style.color=g.ph=='run'&&g.sp<.599?'#f87171':'';
  $('bi').style.width=bp+'%';$('bi').style.background=bp<30?'#ef4444':'#22c55e';
 }
 function fit(t,cx,cy,w,f,col){ctx.font=`800 ${f}px system-ui`;f*=Math.min(1,w/ctx.measureText(t).width);ctx.font=`800 ${f}px system-ui`;ctx.fillStyle=col;ctx.fillText(t,cx,cy)}
@@ -534,7 +597,7 @@ const CARS=['HyperSTUFF Blue','Desert Classic'];
 function mdiag(){const el=$('mst');if(!el)return;const a=mus.a,f=a.src.split('/').pop();let t;if(!mus.on)t='Music is switched off.';else if(!/^https?:/.test(document.baseURI)&&!MUSIC_BASE)t='This game is running inside an embed that has no web address of its own, so it cannot find the music files. Open the game from its Vercel link instead.';else if(a.error)t=`Can't load ${f} (error ${a.error.code}). The file may be missing or blocked.`;else if(!a.paused)t='Playing '+f+'.';else if(mus.err==='NotAllowedError')t='Your phone is blocking sound. Tap anywhere to start it.';else t='Waiting to start…';el.textContent='🎵 '+t+' '+mus.http}
 function mchk(){Promise.all(Object.values(mus.T).flat().map(async c=>{for(const u of c){try{const r=await fetch(MUSIC_BASE+u,{method:'HEAD',mode:MUSIC_BASE?'no-cors':'same-origin'});if(r.type=='opaque'||r.ok)return c[0].replace('music/','').replace('.mp3','')+': found'+(u.startsWith('music/')?'':' in main folder')}catch(_){}}return c[0].replace('music/','').replace('.mp3','')+': NOT FOUND (404)'})).then(r=>{mus.http='('+r.join(' · ')+')'})}
 setInterval(mdiag,600);
-function pick(id){if(id=='options')mchk();['menu','topics','options','mm','envs','cars'].forEach(i=>$(i).hidden=i!=id);if(id=='cars')drawPrev();if(id=='mm'){wcSync();drawStage();$('tp').textContent=KS[topic];const tt=TOPICS[topic].time;$('tl').textContent=Math.floor(tt/60)+':'+String(tt%60).padStart(2,'0')}document.querySelectorAll('.bsv').forEach(e=>e.textContent=best);optSync()}
+function pick(id){if(id=='options')mchk();['menu','topics','options','mm','envs','cars','pfc','pfv'].forEach(i=>$(i).hidden=i!=id);if(id=='cars')drawPrev();if(id=='mm'){wcSync();drawStage();profIcon();$('tp').textContent=KS[topic];const tt=TOPICS[topic].time;$('tl').textContent=Math.floor(tt/60)+':'+String(tt%60).padStart(2,'0')}document.querySelectorAll('.bsv').forEach(e=>e.textContent=best);optSync()}
 function mkSpr(){if(!spr){spr=document.createElement('canvas');spr.width=760;spr.height=480;const c=spr.getContext('2d');c.translate(380,240);c.scale(2,2);carArt(c)}}
 function drawPrev(){CARS.forEach((n,i)=>{const e=$('cp'+i);if(!e)return;const x=e.getContext('2d');x.clearRect(0,0,240,160);let im=carImg;if(i||!carImg.naturalWidth){mkSpr();im=spr}const iw=im.naturalWidth||im.width,ih=im.naturalHeight||im.height,k=Math.min(228/iw,148/ih);x.drawImage(im,(240-iw*k)/2,(160-ih*k)/2,iw*k,ih*k)})}
 [['day','☀️','Day'],['night','🌙','Night'],['rain','🌧️','Rain']].forEach(([k,e,n])=>{const b=document.createElement('button');b.className='card';b.innerHTML=`<span style="font-size:48px">${e}</span>${n}`;b.onclick=()=>{env=k;dirty=1;pick('cars')};$('ec').append(b)});
@@ -628,6 +691,51 @@ function optTab(i){document.querySelectorAll('#options .tab').forEach((b,j)=>b.c
 document.querySelectorAll('#options .tab').forEach((b,j)=>{b.onclick=()=>optTab(j)});optTab(1);
 function openOpt(f){optFrom=f;optTab(1);if(f=='pause'){$('options').hidden=false;mchk();optSync()}else pick('options')}
 $('ob').onclick=()=>{if(optFrom=='pause')$('options').hidden=true;else pick(optFrom)};
+// ===== Player profile (saved on this phone for now) =====
+let prof=null,runTop=0,pfd={av:0,ph:''},pfEdit=0;
+try{prof=JSON.parse(localStorage.getItem('medProfile')||'null')}catch(_){}
+if(prof&&!prof.st)prof.st={ans:0,ok:0,races:0,wins:0,losses:0,best:0,top:0};
+function saveProf(){try{localStorage.setItem('medProfile',JSON.stringify(prof))}catch(_){}}
+const CT=[['DZ','Algeria'],['AO','Angola'],['AU','Australia'],['BJ','Benin'],['BW','Botswana'],['BF','Burkina Faso'],['CM','Cameroon'],['CA','Canada'],['TD','Chad'],['CN','China'],['CI',"C\u00f4te d'Ivoire"],['CD','DR Congo'],['EG','Egypt'],['ET','Ethiopia'],['FR','France'],['GA','Gabon'],['GM','Gambia'],['DE','Germany'],['GH','Ghana'],['GN','Guinea'],['IN','India'],['IE','Ireland'],['KE','Kenya'],['LR','Liberia'],['LY','Libya'],['MW','Malawi'],['ML','Mali'],['MA','Morocco'],['MZ','Mozambique'],['NA','Namibia'],['NE','Niger'],['NG','Nigeria'],['PK','Pakistan'],['RW','Rwanda'],['SA','Saudi Arabia'],['SN','Senegal'],['SL','Sierra Leone'],['SO','Somalia'],['ZA','South Africa'],['SS','South Sudan'],['SD','Sudan'],['TZ','Tanzania'],['TG','Togo'],['TN','Tunisia'],['UG','Uganda'],['AE','United Arab Emirates'],['GB','United Kingdom'],['US','United States'],['ZM','Zambia'],['ZW','Zimbabwe'],['XX','Other']];
+const YR=['Year 1','Year 2','Year 3','Year 4','Year 5','Year 6','Intern','Graduate'];
+const HC=[['#34d399','#064e3b'],['#38bdf8','#0c4a6e'],['#f87171','#7f1d1d'],['#fbbf24','#78350f'],['#c4b5fd','#4c1d95'],['#e5e7eb','#374151']];
+const flag=c=>c&&c!='XX'?String.fromCodePoint.apply(null,c.split('').map(x=>127397+x.charCodeAt(0))):'\ud83c\udf0d';
+const cname=c=>(CT.find(x=>x[0]==c)||['','Other'])[1];
+function helm(i){const a=HC[i%6][0],b=HC[i%6][1];return '<svg viewBox="0 0 64 64"><rect width="64" height="64" fill="#140c05"/><path d="M6 40C6 20 18 8 34 8s24 12 24 30v6c0 6-5 10-11 10H18C11 54 6 48 6 42z" fill="'+a+'"/><path d="M6 42v0c0 6 5 12 12 12h29c6 0 11-4 11-10v-6z" fill="'+b+'" opacity=".55"/><path d="M28 24h28v15H33c-3 0-5-2-5-5z" fill="#0b1220"/><path d="M31 27h22v3H31z" fill="#fff" opacity=".28"/><path d="M13 40h12M19 34v12" stroke="#fff" stroke-width="4.5" stroke-linecap="round"/></svg>'}
+const av=p=>p.ph?'<img src="'+p.ph+'" alt="">':helm(p.av||0);
+function standing(y){const i=YR.indexOf(y);return i<0?'STUDENT':i<2?'PRE-CLINICAL STUDENT':i<6?'CLINICAL STUDENT':i==6?'INTERN':'GRADUATE'}
+function lvl(xp){let l=1,r=xp,n=500;while(r>=n){r-=n;l++;n=500+(l-1)*250}return{l:l,r:r,n:n}}
+function profIcon(){const e=$('mpf');if(e)e.innerHTML=prof?av(prof):'\ud83d\udc64'}
+function profRec(w,m,n){if(!prof)return;const s=prof.st;s.ans+=n;s.ok+=m.correct;s.races++;if(w)s.wins++;else s.losses++;if(g.sc>s.best)s.best=g.sc;if(runTop>s.top)s.top=runTop;prof.xp+=g.sc+(w?150:30);saveProf()}
+$('pf_c').innerHTML='<option value="">Select country</option>'+CT.map(c=>'<option value="'+c[0]+'">'+flag(c[0])+' '+c[1]+'</option>').join('');
+$('pf_y').innerHTML='<option value="">Select year</option>'+YR.map(y=>'<option>'+y+'</option>').join('');
+$('pfh').innerHTML=HC.map((c,i)=>'<button type="button" class="pfhb" data-i="'+i+'">'+helm(i)+'</button>').join('');
+function pfPrev(){$('pfav').innerHTML=av(pfd);document.querySelectorAll('.pfhb').forEach(b=>b.classList.toggle('on',!pfd.ph&&+b.dataset.i==pfd.av))}
+document.querySelectorAll('.pfhb').forEach(b=>{b.onclick=()=>{pfd.av=+b.dataset.i;pfd.ph='';pfPrev()}});
+$('pfp').onchange=e=>{const f=e.target.files&&e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>{const c=document.createElement('canvas');c.width=c.height=128;const x=c.getContext('2d'),s=Math.min(im.width,im.height);x.drawImage(im,(im.width-s)/2,(im.height-s)/2,s,s,0,0,128,128);pfd.ph=c.toDataURL('image/jpeg',.72);pfPrev()};im.src=r.result};r.readAsDataURL(f)};
+function openPF(edit){pfEdit=edit;const p=edit?prof:{};pfd={av:p.av||0,ph:p.ph||''};$('pfct').textContent=edit?'EDIT PROFILE':'CREATE YOUR PROFILE';
+ $('pf_u').value=p.u||'';$('pf_c').value=p.cc||'';$('pf_n').value=p.uni||'';$('pf_y').value=p.yr||'';$('pf_e').value=p.em||'';$('pf_t').value=p.tel||'';$('pf_b').value=p.bio||'';$('pf_k').checked=!!edit;
+ $('pfe').textContent='';$('pfsv').textContent=edit?'SAVE':'START';$('pfcn').hidden=!edit;pfPrev();pick('pfc')}
+$('pfsv').onclick=()=>{const v=id=>$(id).value.trim(),u=v('pf_u'),e=v('pf_e'),t=v('pf_t').replace(/[\s()-]/g,'');let m='',f='';
+ if(!/^[A-Za-z0-9_]{3,16}$/.test(u)){m='Username: 3 to 16 letters, numbers or _';f='pf_u'}
+ else if(!v('pf_c')){m='Choose your country';f='pf_c'}
+ else if(v('pf_n').length<2){m='Enter your university or school';f='pf_n'}
+ else if(!v('pf_y')){m='Choose your year of study';f='pf_y'}
+ else if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(e)){m='Enter a valid email address';f='pf_e'}
+ else if(!/^\+?\d{7,15}$/.test(t)){m='Enter a valid phone number';f='pf_t'}
+ else if(!$('pf_k').checked){m='Please tick the agreement box';f='pf_k'}
+ if(m){$('pfe').textContent=m;try{$(f).focus()}catch(_){}return}
+ prof=Object.assign({xp:0,st:{ans:0,ok:0,races:0,wins:0,losses:0,best:0,top:0},created:Date.now()},prof||{},{u:u,cc:v('pf_c'),uni:v('pf_n'),yr:v('pf_y'),em:e,tel:t,bio:v('pf_b'),av:pfd.av,ph:pfd.ph,consent:1});
+ saveProf();profIcon();if(pfEdit)profView();else pick('menu')};
+$('pfcn').onclick=()=>profView();
+function profView(){const p=prof,L=lvl(p.xp),s=p.st,acc=s.ans?Math.round(100*s.ok/s.ans):0;
+ $('pvav').innerHTML=av(p);$('pvu').textContent=p.u;$('pvbio').textContent=p.bio||'No bio yet';$('pvc').textContent=flag(p.cc)+' '+cname(p.cc)+' \u00b7 '+p.uni;$('pvbio2').textContent=p.bio||'No bio yet';
+ $('pvl').textContent=L.l;$('pvst').textContent=standing(p.yr);$('pvyr').textContent=p.yr.toUpperCase()+' \u00b7 LEVEL '+L.l;$('pvxb').style.width=Math.round(100*L.r/L.n)+'%';$('pvxt').textContent=L.r.toLocaleString()+' / '+L.n.toLocaleString()+' XP';
+ $('pvcar').src=(carSel==0&&carImg.naturalWidth)?carImg.src:(mkSpr(),spr.toDataURL());$('pvcn').textContent=CARS[carSel];
+ $('pvtop').textContent=s.top;$('pvbest').textContent=s.best.toLocaleString();$('pvacc').style.background='conic-gradient(#4ade80 '+acc+'%,#33261a 0)';$('pvaccn').textContent=acc+'%';$('pvw').textContent=s.wins;$('pvls').textContent=s.losses;$('pvrc').textContent=s.races+' RACES';
+ pick('pfv')}
+$('mpf').onclick=()=>profView();$('pvb').onclick=()=>pick('mm');$('pved').onclick=()=>openPF(1);
+profIcon();if(!prof)openPF(0);
 function loop(ts){const raw=(ts-last)/1000||0;if(st=='race'&&g.ph=='run'&&!g.pz&&raw<.5&&dprMax>.75){fq.s+=raw;if(++fq.n>=150){if(fq.s/fq.n>.034){dprMax=dprMax>1?1:.75;rs()}fq.n=0;fq.s=0}}const dt=Math.min(.05,raw);last=ts;T=ts/1000;upd(dt);if(!((st=='race'&&g.pz)||st=='end')||dirty){draw();dirty=0}requestAnimationFrame(loop)}
 requestAnimationFrame(loop);
 (()=>{const t0=performance.now(),sf=$('sf'),sp=$('sp'),sc=$('splash');(function f(){const k=Math.min(1,(performance.now()-t0)/10000);sf.style.width=k*100+'%';sp.textContent=k<1?'Loading… '+Math.floor(k*100)+'%':'Ready!';if(k<1)requestAnimationFrame(f);else{sc.classList.add('out');setTimeout(()=>sc.remove(),700)}})()})();
