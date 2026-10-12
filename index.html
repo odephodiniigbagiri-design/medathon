@@ -325,8 +325,49 @@ Pectoralis minor divides the axillary artery into how many parts?|Three|Two|Four
 Which part of the axillary artery lies behind pectoralis minor?|Second part|First part|Third part|Terminal part
 The clavicular head of pectoralis major arises from the?|Medial half of the clavicle|Acromion|Spine of scapula|Coracoid process
 The sternocostal head of pectoralis major arises from the?|Sternum and upper costal cartilages|Acromion|Iliac crest|Spine of scapula`.split('\n').map(l=>l.split('|'));
-const KS=['Intro to Anatomy','Brachial Plexus','Pectoral Region','Bones & Joints','Muscles & Movement','Heart & Vessels','Nervous System'];
-const TOPICS=[{q:Q,time:180},{q:QB,time:300},{q:QP,time:300}];
+// Breast (level 4): all 40 questions from Breast_40_MCQs_With_Options_Answers.docx
+const QR=`The breast lies in which superficial fascia?|Superficial fascia of anterior thoracic wall|Deep fascia|Endothoracic fascia|Prevertebral fascia
+Which vertebral levels does the adult female breast typically extend between?|T2-T6|T1-T4|T4-T8|T3-T7
+The axillary tail of Spence extends into the:|Axilla|Neck|Arm|Back
+The functional unit of the breast is the:|Lobule|Areola|Nipple|Septum
+How many lobes are typically present in the breast?|15-20|5-10|10-15|25-30
+Lactiferous ducts open onto the:|Nipple|Areola|Skin|Axilla
+Fibrous bands supporting the breast are called:|Cooper ligaments|Poupart ligaments|Cruciate ligaments|Pectinate ligaments
+Retraction of skin in breast cancer is due to involvement of:|Cooper ligaments|Fat|Nipple|Veins
+The main arterial supply arises from branches of the:|Axillary and internal thoracic arteries|Femoral artery|Radial artery|Aorta only
+The lateral thoracic artery is a branch of:|Axillary artery|Subclavian artery|Brachial artery|Thoracic aorta
+The nipple is usually located at which dermatome?|T4|T2|T6|T8
+Most lymph from the breast drains to:|Axillary nodes|Parasternal nodes|Supraclavicular nodes|Posterior mediastinal nodes
+Sentinel lymph node biopsy assesses:|First draining node|Largest node|Deepest node|Thoracic node
+The upper outer quadrant is clinically significant because:|Most cancers occur there|Least tissue|No lymph drainage|No ducts
+Which structure lies deep to the breast?|Pectoralis major fascia|Pleura directly|Heart|Diaphragm
+Milk is produced by:|Lobules/alveoli|Nipple|Areola|Ligaments
+Pigmented skin around nipple is called:|Areola|Hilum|Lobule|Sinus
+Breast development in females is stimulated mainly by:|Estrogen|Cortisol|Thyroxine|Insulin
+Which hormone is responsible for milk production?|Prolactin|Oxytocin|Estrogen|Progesterone
+Milk ejection reflex is mediated by:|Oxytocin|Prolactin|ACTH|GH
+Peau d’orange appearance results from obstruction of:|Lymphatics|Arteries|Nerves|Ducts
+Breast cancer most commonly arises from:|Ducts|Ligaments|Skin|Arteries
+The pectoral group of axillary nodes lies along:|Lateral thoracic vessels|Cephalic vein|Brachial artery|Subscapular nerve
+Venous drainage occurs primarily to:|Axillary vein|Portal vein|IVC only|Azygos only
+Gynecomastia refers to:|Male breast enlargement|Inflammation|Breast tumor|Nipple inversion
+The retromammary space lies between breast and:|Pectoral fascia|Skin|Rib|Pleura
+Nipple inversion may indicate:|Breast carcinoma|Normal puberty only|Hyperthyroidism|Fracture
+Parasternal nodes receive lymph mainly from:|Medial quadrants|Lateral quadrants only|Back|Arm
+Breast tissue is modified:|Mammary gland|Sweat gland|Sebaceous gland|Apocrine gland
+Which quadrant contains the axillary tail?|Upper outer|Upper inner|Lower outer|Lower inner
+Suspensory ligaments attach skin to:|Deep fascia|Pleura|Lung|Heart
+Most breast cancers spread initially through:|Lymphatics|Arteries|Bones|Muscles
+The breast bud develops from:|Mammary ridge|Neural crest|Somite|Pharyngeal arch
+Accessory breast tissue develops along the:|Milk line|Linea alba|Midaxillary line only|Clavicle
+The breast is separated from pectoralis major by:|Retromammary space|Axillary sheath|Pleural cavity|Mediastinum
+Inflammation of breast tissue is called:|Mastitis|Mastoiditis|Myositis|Cellulitis
+The areola contains numerous:|Sebaceous glands|Lymph nodes|Hair follicles only|Cartilage
+Which nodes are located at the apex of the axilla?|Apical nodes|Pectoral nodes|Humeral nodes|Central nodes
+Breast cancer may metastasize to vertebrae via:|Vertebral venous plexus|Portal vein|Femoral vein|Coronary sinus
+Which imaging modality is routinely used for screening?|Mammography|CT|MRI|Ultrasound only`.split('\n').map(l=>l.split('|'));
+const KS=['Intro to Anatomy','Brachial Plexus','Pectoral Region','Breast','Bones & Joints','Muscles & Movement','Heart & Vessels','Nervous System'];
+const TOPICS=[{q:Q,time:180},{q:QB,time:300},{q:QP,time:300},{q:QR,time:300}];
 const LC=['#ef4444','#3b82f6','#22c55e','#f59e0b'],L=60,QT=10,CAR_Z=3;
 const $=i=>document.getElementById(i),cl=(v,a,b)=>Math.max(a,Math.min(b,v)),md=(a,n)=>((a%n)+n)%n,shuf=a=>{for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a},tc={},tx=(i,v)=>{if(tc[i]!==v){tc[i]=v;$(i).textContent=v}};
 let best=0;try{best=+localStorage.getItem('medBest')||0}catch(_){}
@@ -692,10 +733,11 @@ function panel(par,n,em,gr,lk,fn){const b=document.createElement('button'),[a,c]
 panel($('mp'),'Career Mode',`<img class="hi" src="${HERO}" alt="">`,'#92400e,#fbbf24',0,()=>pick('topics'));
 [['Challenge Mode','🏁','#1e3a8a,#38bdf8'],['Drive in City','🌆','#1f2937,#6366f1'],['Multiplayer','👥','#4c1d95,#a78bfa']].forEach(([n,e,gr])=>panel($('mp'),n,e,gr,'COMING SOON',()=>note('This mode is coming soon.')));
 panel($('mp'),'Game Options','⚙️','#334155,#94a3b8',0,()=>openOpt('menu'));
-const TA=[['🧬','#1e3a8a,#38bdf8'],['🖐️','#065f46,#34d399'],['🫁','#9d174d,#f472b6'],['🦴','#7c2d12,#fb923c'],['💪','#14532d,#4ade80'],['🫀','#7f1d1d,#f87171'],['🧠','#581c87,#c084fc']];
+const TA=[['🧬','#1e3a8a,#38bdf8'],['🖐️','#065f46,#34d399'],['🫁','#9d174d,#f472b6'],['🎀','#0e7490,#22d3ee'],['🦴','#7c2d12,#fb923c'],['💪','#14532d,#4ade80'],['🫀','#7f1d1d,#f87171'],['🧠','#581c87,#c084fc']];
 let done=[];try{done=JSON.parse(localStorage.getItem('medDone')||'[]')}catch(_){}
 if(/[?&]unlock=1/.test(location.search))done=[0];
 if(/[?&]unlock=2/.test(location.search))done=[0,1];
+if(/[?&]unlock=3/.test(location.search))done=[0,1,2];
 const open_=i=>i==0||(i<TOPICS.length&&done.includes(i-1));
 function buildTopics(){$('tc').innerHTML='';$('msg3').textContent='Pick a topic to enter its garage. Finish a topic to unlock the next one.';KS.forEach((n,i)=>{panel($('tc'),n,TA[i][0],TA[i][1],open_(i)?0:(i<TOPICS.length?'FINISH LEVEL '+i:'LOCKED'),()=>open_(i)?(topic=i,pick('mm')):note(i<TOPICS.length?'Finish '+KS[i-1]+' to unlock '+KS[i]+'.':'Paid topics are locked in this prototype. Payment will be connected later.'));if(done.includes(i))$('tc').lastChild.insertAdjacentHTML('beforeend','<span class="ck">✓</span>')})}
 buildTopics();
