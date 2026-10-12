@@ -298,8 +298,35 @@ The suprascapular nerve supplies which muscle?|Supraspinatus|Deltoid|Triceps|Ter
 Which nerves supply pectoralis major?|Pectoral nerves|Axillary|Radial|Ulnar
 Which nerve mainly supplies the thenar muscles?|Median|Ulnar|Radial|Axillary
 Which nerve supplies the hypothenar muscles?|Ulnar|Median|Radial|Musculocutaneous`.split('\n').map(l=>l.split('|'));
-const KS=['Intro to Anatomy','Brachial Plexus','Bones & Joints','Muscles & Movement','Heart & Vessels','Nervous System'];
-const TOPICS=[{q:Q,time:180},{q:QB,time:300}];
+// Pectoral Region (level 3). First 3 are from Pectoral_Region_40_MCQs_With_Answers.docx; the rest of that file is still template text ("Option A"), so the extra questions below are PLACEHOLDERS: replace with your own set (same format: question|correct|wrong|wrong|wrong)
+const QP=`Which muscle forms the bulk of the anterior chest wall?|Pectoralis major|Pectoralis minor|Subclavius|Serratus anterior
+Pectoralis major is supplied by?|Medial and lateral pectoral nerves|Radial nerve|Ulnar nerve|Axillary nerve
+Pectoralis minor inserts into?|Coracoid process|Acromion|Clavicle|Spine of scapula
+Pectoralis major inserts into?|Lateral lip of the bicipital groove|Coracoid process|Acromion|Medial border of scapula
+Main action of pectoralis major?|Adducts and medially rotates the arm|Abducts the arm|Elevates the scapula|Extends the forearm
+Pectoralis minor arises from which ribs?|3rd–5th|1st–2nd|6th–8th|9th–10th
+Which muscle lies deep to pectoralis major?|Pectoralis minor|Trapezius|Latissimus dorsi|Deltoid
+Subclavius is supplied by?|Nerve to subclavius|Lateral pectoral nerve|Long thoracic nerve|Axillary nerve
+Subclavius runs between the first rib and the?|Clavicle|Scapula|Humerus|Sternum
+Which fascia is pierced by the thoracoacromial artery?|Clavipectoral fascia|Thoracolumbar fascia|Fascia lata|Deep cervical fascia
+The thoracoacromial artery is a branch of which artery?|Axillary|Subclavian|Brachial|Internal thoracic
+Which nerve mainly supplies pectoralis minor?|Medial pectoral nerve|Lateral pectoral nerve|Long thoracic nerve|Thoracodorsal nerve
+The lateral pectoral nerve arises from which cord?|Lateral|Medial|Posterior|Anterior
+The medial pectoral nerve arises from which cord?|Medial|Lateral|Posterior|Anterior
+Which muscle does the breast mainly lie on?|Pectoralis major|Trapezius|Deltoid|Rectus abdominis
+Which ligaments support the breast?|Suspensory ligaments of Cooper|Inguinal ligament|Falciform ligament|Nuchal ligament
+Most lymph from the breast drains to which nodes?|Axillary nodes|Inguinal nodes|Popliteal nodes|Submandibular nodes
+Which vein runs in the deltopectoral groove?|Cephalic vein|Basilic vein|Brachial vein|Great saphenous vein
+The deltopectoral groove separates deltoid from?|Pectoralis major|Trapezius|Latissimus dorsi|Biceps brachii
+Which muscle forms the anterior axillary fold?|Pectoralis major|Latissimus dorsi|Teres major|Subscapularis
+The posterior axillary fold is formed mainly by?|Latissimus dorsi and teres major|Pectoralis major|Pectoralis minor|Serratus anterior
+Where does the cephalic vein end?|Axillary vein|Basilic vein|Internal jugular vein|Great saphenous vein
+Pectoralis minor divides the axillary artery into how many parts?|Three|Two|Four|Five
+Which part of the axillary artery lies behind pectoralis minor?|Second part|First part|Third part|Terminal part
+The clavicular head of pectoralis major arises from the?|Medial half of the clavicle|Acromion|Spine of scapula|Coracoid process
+The sternocostal head of pectoralis major arises from the?|Sternum and upper costal cartilages|Acromion|Iliac crest|Spine of scapula`.split('\n').map(l=>l.split('|'));
+const KS=['Intro to Anatomy','Brachial Plexus','Pectoral Region','Bones & Joints','Muscles & Movement','Heart & Vessels','Nervous System'];
+const TOPICS=[{q:Q,time:180},{q:QB,time:300},{q:QP,time:300}];
 const LC=['#ef4444','#3b82f6','#22c55e','#f59e0b'],L=60,QT=10,CAR_Z=3;
 const $=i=>document.getElementById(i),cl=(v,a,b)=>Math.max(a,Math.min(b,v)),md=(a,n)=>((a%n)+n)%n,shuf=a=>{for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a},tc={},tx=(i,v)=>{if(tc[i]!==v){tc[i]=v;$(i).textContent=v}};
 let best=0;try{best=+localStorage.getItem('medBest')||0}catch(_){}
@@ -665,11 +692,12 @@ function panel(par,n,em,gr,lk,fn){const b=document.createElement('button'),[a,c]
 panel($('mp'),'Career Mode',`<img class="hi" src="${HERO}" alt="">`,'#92400e,#fbbf24',0,()=>pick('topics'));
 [['Challenge Mode','🏁','#1e3a8a,#38bdf8'],['Drive in City','🌆','#1f2937,#6366f1'],['Multiplayer','👥','#4c1d95,#a78bfa']].forEach(([n,e,gr])=>panel($('mp'),n,e,gr,'COMING SOON',()=>note('This mode is coming soon.')));
 panel($('mp'),'Game Options','⚙️','#334155,#94a3b8',0,()=>openOpt('menu'));
-const TA=[['🧬','#1e3a8a,#38bdf8'],['🖐️','#065f46,#34d399'],['🦴','#7c2d12,#fb923c'],['💪','#14532d,#4ade80'],['🫀','#7f1d1d,#f87171'],['🧠','#581c87,#c084fc']];
+const TA=[['🧬','#1e3a8a,#38bdf8'],['🖐️','#065f46,#34d399'],['🫁','#9d174d,#f472b6'],['🦴','#7c2d12,#fb923c'],['💪','#14532d,#4ade80'],['🫀','#7f1d1d,#f87171'],['🧠','#581c87,#c084fc']];
 let done=[];try{done=JSON.parse(localStorage.getItem('medDone')||'[]')}catch(_){}
 if(/[?&]unlock=1/.test(location.search))done=[0];
-const open_=i=>i==0||(i==1&&done.includes(0));
-function buildTopics(){$('tc').innerHTML='';$('msg3').textContent='Pick a topic to enter its garage. Finish a topic to unlock the next one.';KS.forEach((n,i)=>{panel($('tc'),n,TA[i][0],TA[i][1],open_(i)?0:(i==1?'FINISH LEVEL 1':'LOCKED'),()=>open_(i)?(topic=i,pick('mm')):note(i==1?'Finish Intro to Anatomy to unlock Brachial Plexus.':'Paid topics are locked in this prototype. Payment will be connected later.'));if(done.includes(i))$('tc').lastChild.insertAdjacentHTML('beforeend','<span class="ck">✓</span>')})}
+if(/[?&]unlock=2/.test(location.search))done=[0,1];
+const open_=i=>i==0||(i<TOPICS.length&&done.includes(i-1));
+function buildTopics(){$('tc').innerHTML='';$('msg3').textContent='Pick a topic to enter its garage. Finish a topic to unlock the next one.';KS.forEach((n,i)=>{panel($('tc'),n,TA[i][0],TA[i][1],open_(i)?0:(i<TOPICS.length?'FINISH LEVEL '+i:'LOCKED'),()=>open_(i)?(topic=i,pick('mm')):note(i<TOPICS.length?'Finish '+KS[i-1]+' to unlock '+KS[i]+'.':'Paid topics are locked in this prototype. Payment will be connected later.'));if(done.includes(i))$('tc').lastChild.insertAdjacentHTML('beforeend','<span class="ck">✓</span>')})}
 buildTopics();
 $('nx').onclick=()=>{topic++;start()};
 $('tb').onclick=()=>pick('menu');$('mb').onclick=()=>pick('topics');$('mo').onclick=()=>openOpt('mm');$('gg').onclick=()=>pick('cars');
