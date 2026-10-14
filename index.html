@@ -204,8 +204,17 @@ input,select,textarea{-webkit-user-select:text;user-select:text}
 #tc .pa .lc{right:9%}
 #tc>.lk .lb{right:calc(17% + 90px);right:calc(17% + clamp(90px,24vh,140px))}
 #tc .pa .ck{right:15%}
+
+.lgb{width:420px;width:min(420px,92vw);display:flex;flex-direction:column;text-align:left}
+.lgb>*{margin-bottom:8px}
+.lgtabs{display:flex}
+.lgb label{font-size:10px;letter-spacing:1px;color:#d6a45a;font-weight:700;display:block}
+.lgb input{width:100%;box-sizing:border-box;margin-top:2px;height:32px;height:clamp(32px,9vh,38px);background:#120b05;color:#fff;border:1px solid #7c4a12;border-radius:6px;padding:0 8px;font-size:16px}
+#lge{min-height:16px;font-size:12px;font-weight:700;color:#f87171}
+.lgl{background:none;border:0;color:#fbbf24;text-decoration:underline;font-size:12px;padding:4px}
+.pff input[readonly]{opacity:.65}
 </style><meta name="author" content="Eghuan Ventures"><meta name="copyright" content="© 2026 Eghuan Ventures. All rights reserved."><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0b1220"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="apple-touch-icon" href="icon-192.png"><link rel="icon" href="icon-192.png">
-<script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script><script defer src="/_vercel/insights/script.js"></script>
+<script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script><script defer src="/_vercel/insights/script.js"></script><script src="vendor/supabase.js"></script>
 </head><body>
 <canvas id="c"></canvas>
 <div id="hud" class="ov" hidden><span id="lv"></span><span id="qn"></span><span id="tm"></span><span id="sc"></span><span id="spd"></span><span><button class="hb" id="vw" hidden>🧑‍✈️</button> <button class="hb" id="fs">⛶</button> <button class="hb" id="mu">🎵</button> <button class="hb" id="sn">🔔</button> <button class="hb" id="vo">🔊</button> <button class="hb" id="ps">⏸</button></span></div>
@@ -219,13 +228,16 @@ input,select,textarea{-webkit-user-select:text;user-select:text}
 <div id="options" class="scr go2" hidden><div class="gh"><button class="gb" id="ob">‹</button><div class="gt">GAME OPTIONS</div></div>
 <div class="tabs"><button class="tab" type="button">Medathon Connect</button><button class="tab on" type="button">Game Settings</button><button class="tab" type="button">Game Info</button></div>
 <div class="tp" id="op0" hidden><p class="how" style="text-align:center">Join the Medathon community. Our social pages will be added here soon.</p><div class="wg" style="margin-top:10px"><button class="wb" disabled>Instagram<small>Coming soon</small></button><button class="wb" disabled>WhatsApp<small>Coming soon</small></button><button class="wb" disabled>YouTube<small>Coming soon</small></button><button class="wb" disabled>X (Twitter)<small>Coming soon</small></button></div></div>
-<div class="tp" id="op1"><div class="wg"><button class="wb" id="osn"></button><button class="wb" id="ovo"></button><button class="wb" id="omu"></button><button class="wb" id="fsm">⛶ Fullscreen</button><button class="wb" id="inst" hidden>📲 Install app</button><button class="wb" id="opn" hidden>↗ Open full page</button></div><p class="ft2" id="mst"></p><p class="ft2" id="msg2"></p></div>
+<div class="tp" id="op1"><div class="wg"><button class="wb" id="osn"></button><button class="wb" id="ovo"></button><button class="wb" id="omu"></button><button class="wb" id="fsm">⛶ Fullscreen</button><button class="wb" id="inst" hidden>📲 Install app</button><button class="wb" id="olg" hidden>Log out</button><button class="wb" id="opn" hidden>↗ Open full page</button></div><p class="ft2" id="mst"></p><p class="ft2" id="msg2"></p></div>
 <div class="tp" id="op2" hidden><p class="how">Hold the long pedal (GAS) and steer with the wheel so you drive under the floating answer you think is right. Stay above 72 km/h or you won't reach the answers before the timer ends. Each level has a time limit (3 minutes for Intro to Anatomy, 5 minutes for the next levels) and more than 5 wrong answers ends it early. Turn your sound on for voice questions and play with your phone in landscape.</p></div>
 <div class="fr"><img class="brand" alt="Eghuan Ventures" draggable="false"><span class="ft2">© 2026 Eghuan Ventures. All rights reserved.</span></div></div>
 <div id="mm" class="scr gar" hidden><div class="gtop"><div class="gl"><button class="bk" id="mb">◀</button><div><b class="mt">MAIN MENU</b><small id="tp"></small></div></div><div class="stat"><span>🏆 Best <b class="bsv">0</b></span><span>⏱ <b id="tl">5:00</b> race</span></div><div class="gtr"><button class="bk" id="mpf" aria-label="Profile"></button><button class="bk" id="mo">⚙️</button></div></div>
 <button class="ar" id="cl">◀</button><canvas id="mc" width="560" height="300"></canvas><button class="ar" id="cr">▶</button><div id="cn"></div>
 <div class="gbl"><div class="tile"><small>WEATHER</small><div><button class="wc" data-e="day">☀️</button><button class="wc" data-e="night">🌙</button><button class="wc" data-e="rain">🌧️</button></div></div><button class="tile" id="gg"><span>🚘</span><small>GARAGE</small></button></div>
 <button id="play">PLAY&nbsp;▶</button><div hidden><button id="v1"></button><button id="v2"></button><div id="ks"></div></div></div>
+<div id="lg" class="scr pf" hidden><div class="pft" id="lgt">WELCOME TO MEDATHON</div><div class="lgb"><div class="lgtabs" id="lgtabs"><button type="button" class="tab on" id="lgt0">LOG IN</button><button type="button" class="tab" id="lgt1">CREATE ACCOUNT</button></div>
+<label id="lgl_e">EMAIL<input type="email" id="lg_e" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false"></label><label id="lgl_p">PASSWORD<input type="password" id="lg_p" autocomplete="current-password"></label><label id="lgl_c" hidden>CONFIRM PASSWORD<input type="password" id="lg_c" autocomplete="new-password"></label>
+<div id="lge"></div><button class="pgo" id="lgsv">LOG IN</button><button type="button" class="lgl" id="lgfg">Forgot password?</button></div></div>
 <div id="pfc" class="scr pf" hidden><div class="pft" id="pfct">CREATE YOUR PROFILE</div>
 <div class="pfs"><div class="pfa"><div class="pfav" id="pfav"></div><div class="pfh" id="pfh"></div><label class="pfu">Upload photo<input type="file" id="pfp" accept="image/*" hidden></label></div>
 <div class="pff"><label>USERNAME<input type="text" id="pf_u" maxlength="16" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="e.g. Dr_Desert_Drift"></label><label>COUNTRY<select id="pf_c"></select></label>
@@ -474,7 +486,7 @@ addEventListener('keydown',e=>{if(e.target&&/^(INPUT|SELECT|TEXTAREA)$/.test(e.t
 addEventListener('contextmenu',e=>{if(!(e.target&&/^(INPUT|TEXTAREA)$/.test(e.target.tagName)))e.preventDefault()});document.addEventListener('click',()=>{const a=document.activeElement;a&&a.blur&&!/^(INPUT|SELECT|TEXTAREA)$/.test(a.tagName)&&a.blur()});
 document.addEventListener('visibilitychange',()=>{if(document.hidden)pz(1)});
 let tOn=0;$('bt').onclick=async()=>{if(!tOn){try{if(window.DeviceOrientationEvent&&DeviceOrientationEvent.requestPermission&&await DeviceOrientationEvent.requestPermission()!='granted')return;addEventListener('deviceorientation',e=>{const a=(screen.orientation&&screen.orientation.angle)||0;tv=cl((a==90?e.beta:a==270?-e.beta:e.gamma)/22,-1,1)});tOn=1}catch(_){return}}tilt=!tilt;$('bt').innerHTML='TILT<br>'+(tilt?'on':'off')};
-function start(){mus.ri++;mus.sv=null;runTop=0;try{const d=document.documentElement;(d.requestFullscreen?d.requestFullscreen():Promise.reject()).then(()=>screen.orientation.lock('landscape')).catch(()=>{})}catch(_){}snd.ctx();wr=0;wh=0;if(SS){SS.cancel();const u=new SpeechSynthesisUtterance(' ');u.volume=0;SS.speak(u)}g={ph:'cd',cd:3.99,t:0,qi:0,qs:0,sc:0,px:1.5,sp:.4,sm:0,dist:0,J:L+CAR_Z,old:null,mx:null,miss:[],fb:'',ft:0,pz:0,ln:0,deck:shuf(TOPICS[topic].q.slice())};$('ft').textContent='';gameManager.timeLimit=TOPICS[topic].time;gameManager.reset();roadSpawner.reset(g.dist);st='race';['menu','topics','options','mm','envs','cars','pfc','pfv','end','pause'].forEach(i=>$(i).hidden=true);$('hud').hidden=$('pad').hidden=false;$('qb').hidden=true}
+function start(){mus.ri++;mus.sv=null;runTop=0;try{const d=document.documentElement;(d.requestFullscreen?d.requestFullscreen():Promise.reject()).then(()=>screen.orientation.lock('landscape')).catch(()=>{})}catch(_){}snd.ctx();wr=0;wh=0;if(SS){SS.cancel();const u=new SpeechSynthesisUtterance(' ');u.volume=0;SS.speak(u)}g={ph:'cd',cd:3.99,t:0,qi:0,qs:0,sc:0,px:1.5,sp:.4,sm:0,dist:0,J:L+CAR_Z,old:null,mx:null,miss:[],fb:'',ft:0,pz:0,ln:0,deck:shuf(TOPICS[topic].q.slice())};$('ft').textContent='';gameManager.timeLimit=TOPICS[topic].time;gameManager.reset();roadSpawner.reset(g.dist);st='race';['menu','topics','options','mm','envs','cars','pfc','pfv','lg','end','pause'].forEach(i=>$(i).hidden=true);$('hud').hidden=$('pad').hidden=false;$('qb').hidden=true}
 function newQ(){g.q=g.deck[g.qi%g.deck.length];g.o=shuf([0,1,2,3]);g.cl=g.o.indexOf(0);g.qs=g.t;$('qt').textContent=g.q[0];say(g.fb+' '+g.q[0],1);g.fb=''}
 function toast(t,c){$('ft').textContent=t;$('ft').style.color=c;g.ft=1.6}
 function ev(ok,pts,slow){snd.sfx(slow?'slow':ok?'ok':'bad');gameManager.record(ok);
@@ -702,7 +714,7 @@ const CARS=['HyperSTUFF Blue','Desert Classic'];
 function mdiag(){const el=$('mst');if(!el)return;const a=mus.a,f=a.src.split('/').pop();let t;if(!mus.on)t='Music is switched off.';else if(!/^https?:/.test(document.baseURI)&&!MUSIC_BASE)t='This game is running inside an embed that has no web address of its own, so it cannot find the music files. Open the game from its Vercel link instead.';else if(a.error)t=`Can't load ${f} (error ${a.error.code}). The file may be missing or blocked.`;else if(!a.paused)t='Playing '+f+'.';else if(mus.err==='NotAllowedError')t='Your phone is blocking sound. Tap anywhere to start it.';else t='Waiting to start…';el.textContent='🎵 '+t+' '+mus.http}
 function mchk(){Promise.all(Object.values(mus.T).flat().map(async c=>{for(const u of c){try{const r=await fetch(MUSIC_BASE+u,{method:'HEAD',mode:MUSIC_BASE?'no-cors':'same-origin'});if(r.type=='opaque'||r.ok)return c[0].replace('music/','').replace('.mp3','')+': found'+(u.startsWith('music/')?'':' in main folder')}catch(_){}}return c[0].replace('music/','').replace('.mp3','')+': NOT FOUND (404)'})).then(r=>{mus.http='('+r.join(' · ')+')'})}
 setInterval(mdiag,600);
-function pick(id){if(id=='options')mchk();['menu','topics','options','mm','envs','cars','pfc','pfv'].forEach(i=>$(i).hidden=i!=id);if(id=='cars')drawPrev();if(id=='mm'){wcSync();drawStage();profIcon();$('tp').textContent=KS[topic];const tt=TOPICS[topic].time;$('tl').textContent=Math.floor(tt/60)+':'+String(tt%60).padStart(2,'0')}document.querySelectorAll('.bsv').forEach(e=>e.textContent=best);optSync()}
+function pick(id){if(id=='options')mchk();['menu','topics','options','mm','envs','cars','pfc','pfv','lg'].forEach(i=>$(i).hidden=i!=id);if(id=='cars')drawPrev();if(id=='mm'){wcSync();drawStage();profIcon();$('tp').textContent=KS[topic];const tt=TOPICS[topic].time;$('tl').textContent=Math.floor(tt/60)+':'+String(tt%60).padStart(2,'0')}document.querySelectorAll('.bsv').forEach(e=>e.textContent=best);optSync()}
 function mkSpr(){if(!spr){spr=document.createElement('canvas');spr.width=760;spr.height=480;const c=spr.getContext('2d');c.translate(380,240);c.scale(2,2);carArt(c)}}
 function drawPrev(){CARS.forEach((n,i)=>{const e=$('cp'+i);if(!e)return;const x=e.getContext('2d');x.clearRect(0,0,240,160);let im=carImg;if(i||!carImg.naturalWidth){mkSpr();im=spr}const iw=im.naturalWidth||im.width,ih=im.naturalHeight||im.height,k=Math.min(228/iw,148/ih);x.drawImage(im,(240-iw*k)/2,(160-ih*k)/2,iw*k,ih*k)})}
 [['day','☀️','Day'],['night','🌙','Night'],['rain','🌧️','Rain']].forEach(([k,e,n])=>{const b=document.createElement('button');b.className='card';b.innerHTML=`<span style="font-size:48px">${e}</span>${n}`;b.onclick=()=>{env=k;dirty=1;pick('cars')};$('ec').append(b)});
@@ -784,7 +796,7 @@ $('tb').onclick=()=>pick('menu');$('mb').onclick=()=>pick('topics');$('mo').oncl
 $('cl').onclick=()=>{carSel=(carSel+CARS.length-1)%CARS.length;drawStage()};$('cr').onclick=()=>{carSel=(carSel+1)%CARS.length;drawStage()};
 function wcSync(){document.querySelectorAll('.wc').forEach(b=>b.classList.toggle('on',b.dataset.e==env))}
 document.querySelectorAll('.wc').forEach(b=>b.onclick=()=>{env=b.dataset.e;dirty=1;wcSync()});
-function optSync(){$('omu').textContent=mus.on?'🎵 Music: On':'🔇 Music: Off';$('mu').textContent=mus.on?'🎵':'🔇';$('osn').textContent=snd.on?'🔔 Sound effects: On':'🔕 Sound effects: Off';$('ovo').textContent=$('vo').textContent.includes('🔇')?'🔇 Voice reading questions: Off':'🔊 Voice reading questions: On'}
+function optSync(){$('olg').hidden=!(cloudOn&&authUser);$('omu').textContent=mus.on?'🎵 Music: On':'🔇 Music: Off';$('mu').textContent=mus.on?'🎵':'🔇';$('osn').textContent=snd.on?'🔔 Sound effects: On':'🔕 Sound effects: Off';$('ovo').textContent=$('vo').textContent.includes('🔇')?'🔇 Voice reading questions: Off':'🔊 Voice reading questions: On'}
 $('osn').onclick=()=>{$('sn').click();optSync()};$('ovo').onclick=()=>{$('vo').click();optSync()};
 function drawStage(){const e=$('mc');if(!e.clientWidth)return;e.width=e.clientWidth*dpr;e.height=e.clientHeight*dpr;const x=e.getContext('2d');let im=carImg;if(carSel||!carImg.naturalWidth){mkSpr();im=spr}
  const W=e.width,H=e.height,sp=im===spr,iw=im.naturalWidth||im.width,ih=im.naturalHeight||im.height,cw=sp?680:iw,ch=sp?364:ih,k=Math.min(W*.52/cw,H*.62/ch)*(sp?.86:1),w=iw*k,h=ih*k,cx=W/2,gy=H*.8,dy=gy-h+(sp?102:0)*k;
@@ -803,7 +815,7 @@ $('ob').onclick=()=>{if(optFrom=='pause')$('options').hidden=true;else pick(optF
 let prof=null,runTop=0,pfd={av:0,ph:''},pfEdit=0;
 try{prof=JSON.parse(localStorage.getItem('medProfile')||'null')}catch(_){}
 if(prof&&!prof.st)prof.st={ans:0,ok:0,races:0,wins:0,losses:0,best:0,top:0};
-function saveProf(){try{localStorage.setItem('medProfile',JSON.stringify(prof))}catch(_){}}
+function saveProf(){if(!prof)return;try{localStorage.setItem('medProfile',JSON.stringify(prof))}catch(_){}}
 const CT=[['DZ','Algeria'],['AO','Angola'],['AU','Australia'],['BJ','Benin'],['BW','Botswana'],['BF','Burkina Faso'],['CM','Cameroon'],['CA','Canada'],['TD','Chad'],['CN','China'],['CI',"C\u00f4te d'Ivoire"],['CD','DR Congo'],['EG','Egypt'],['ET','Ethiopia'],['FR','France'],['GA','Gabon'],['GM','Gambia'],['DE','Germany'],['GH','Ghana'],['GN','Guinea'],['IN','India'],['IE','Ireland'],['KE','Kenya'],['LR','Liberia'],['LY','Libya'],['MW','Malawi'],['ML','Mali'],['MA','Morocco'],['MZ','Mozambique'],['NA','Namibia'],['NE','Niger'],['NG','Nigeria'],['PK','Pakistan'],['RW','Rwanda'],['SA','Saudi Arabia'],['SN','Senegal'],['SL','Sierra Leone'],['SO','Somalia'],['ZA','South Africa'],['SS','South Sudan'],['SD','Sudan'],['TZ','Tanzania'],['TG','Togo'],['TN','Tunisia'],['UG','Uganda'],['AE','United Arab Emirates'],['GB','United Kingdom'],['US','United States'],['ZM','Zambia'],['ZW','Zimbabwe'],['XX','Other']];
 const YR=['Year 1','Year 2','Year 3','Year 4','Year 5','Year 6','Intern','Graduate'];
 const HC=[['#34d399','#064e3b'],['#38bdf8','#0c4a6e'],['#f87171','#7f1d1d'],['#fbbf24','#78350f'],['#c4b5fd','#4c1d95'],['#e5e7eb','#374151']];
@@ -814,16 +826,16 @@ const av=p=>p.ph?'<img src="'+p.ph+'" alt="">':helm(p.av||0);
 function standing(y){const i=YR.indexOf(y);return i<0?'STUDENT':i<2?'PRE-CLINICAL STUDENT':i<6?'CLINICAL STUDENT':i==6?'INTERN':'GRADUATE'}
 function lvl(xp){let l=1,r=xp,n=500;while(r>=n){r-=n;l++;n=500+(l-1)*250}return{l:l,r:r,n:n}}
 function profIcon(){const e=$('mpf');if(e)e.innerHTML=prof?av(prof):'\ud83d\udc64'}
-function profRec(w,m,n){if(!prof)return;const s=prof.st;s.ans+=n;s.ok+=m.correct;s.races++;if(w)s.wins++;else s.losses++;if(g.sc>s.best)s.best=g.sc;if(runTop>s.top)s.top=runTop;prof.xp+=g.sc+(w?150:30);saveProf()}
+function profRec(w,m,n){if(!prof)return;const s=prof.st;s.ans+=n;s.ok+=m.correct;s.races++;if(w)s.wins++;else s.losses++;if(g.sc>s.best)s.best=g.sc;if(runTop>s.top)s.top=runTop;prof.xp+=g.sc+(w?150:30);saveProf();cloudSave()}
 $('pf_c').innerHTML='<option value="">Select country</option>'+CT.map(c=>'<option value="'+c[0]+'">'+flag(c[0])+' '+c[1]+'</option>').join('');
 $('pf_y').innerHTML='<option value="">Select year</option>'+YR.map(y=>'<option>'+y+'</option>').join('');
 $('pfh').innerHTML=HC.map((c,i)=>'<button type="button" class="pfhb" data-i="'+i+'">'+helm(i)+'</button>').join('');
 function pfPrev(){$('pfav').innerHTML=av(pfd);document.querySelectorAll('.pfhb').forEach(b=>b.classList.toggle('on',!pfd.ph&&+b.dataset.i==pfd.av))}
 document.querySelectorAll('.pfhb').forEach(b=>{b.onclick=()=>{pfd.av=+b.dataset.i;pfd.ph='';pfPrev()}});
 $('pfp').onchange=e=>{const f=e.target.files&&e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>{const c=document.createElement('canvas');c.width=c.height=128;const x=c.getContext('2d'),s=Math.min(im.width,im.height);x.drawImage(im,(im.width-s)/2,(im.height-s)/2,s,s,0,0,128,128);pfd.ph=c.toDataURL('image/jpeg',.72);pfPrev()};im.src=r.result};r.readAsDataURL(f)};
-function openPF(edit){pfEdit=edit;const p=edit?prof:{};pfd={av:p.av||0,ph:p.ph||''};$('pfct').textContent=edit?'EDIT PROFILE':'CREATE YOUR PROFILE';
+function openPF(edit,pre){pfEdit=edit;const p=edit?prof:(pre||{});pfd={av:p.av||0,ph:p.ph||''};$('pfct').textContent=edit?'EDIT PROFILE':'CREATE YOUR PROFILE';
  $('pf_u').value=p.u||'';$('pf_c').value=p.cc||'';$('pf_n').value=p.uni||'';$('pf_y').value=p.yr||'';$('pf_e').value=p.em||'';$('pf_t').value=p.tel||'';$('pf_b').value=p.bio||'';$('pf_k').checked=!!edit;
- $('pfe').textContent='';$('pfsv').textContent=edit?'SAVE':'START';$('pfcn').hidden=!edit;pfPrev();pick('pfc')}
+ $('pfe').textContent='';$('pfsv').textContent=edit?'SAVE':'START';$('pfcn').hidden=!edit;pfPrev();pfMail();pick('pfc')}
 $('pfsv').onclick=()=>{const v=id=>$(id).value.trim(),u=v('pf_u'),e=v('pf_e'),t=v('pf_t').replace(/[\s()-]/g,'');let m='',f='';
  if(!/^[A-Za-z0-9_]{3,16}$/.test(u)){m='Username: 3 to 16 letters, numbers or _';f='pf_u'}
  else if(!v('pf_c')){m='Choose your country';f='pf_c'}
@@ -833,8 +845,8 @@ $('pfsv').onclick=()=>{const v=id=>$(id).value.trim(),u=v('pf_u'),e=v('pf_e'),t=
  else if(!/^\+?\d{7,15}$/.test(t)){m='Enter a valid phone number';f='pf_t'}
  else if(!$('pf_k').checked){m='Please tick the agreement box';f='pf_k'}
  if(m){$('pfe').textContent=m;try{$(f).focus()}catch(_){}return}
- prof=Object.assign({xp:0,st:{ans:0,ok:0,races:0,wins:0,losses:0,best:0,top:0},created:Date.now()},prof||{},{u:u,cc:v('pf_c'),uni:v('pf_n'),yr:v('pf_y'),em:e,tel:t,bio:v('pf_b'),av:pfd.av,ph:pfd.ph,consent:1});
- saveProf();profIcon();if(pfEdit)profView();else pick('menu')};
+ pfOld=prof;prof=Object.assign({xp:0,st:{ans:0,ok:0,races:0,wins:0,losses:0,best:0,top:0},created:Date.now()},prof||{},{u:u,cc:v('pf_c'),uni:v('pf_n'),yr:v('pf_y'),em:e,tel:t,bio:v('pf_b'),av:pfd.av,ph:pfd.ph,consent:1});
+ finishPF()};
 $('pfcn').onclick=()=>profView();
 function profView(){const p=prof,L=lvl(p.xp),s=p.st,acc=s.ans?Math.round(100*s.ok/s.ans):0;
  $('pvav').innerHTML=av(p);$('pvu').textContent=p.u;$('pvbio').textContent=p.bio||'No bio yet';$('pvc').textContent=flag(p.cc)+' '+cname(p.cc)+' \u00b7 '+p.uni;$('pvbio2').textContent=p.bio||'No bio yet';
@@ -843,7 +855,55 @@ function profView(){const p=prof,L=lvl(p.xp),s=p.st,acc=s.ans?Math.round(100*s.o
  $('pvtop').textContent=s.top;$('pvbest').textContent=s.best.toLocaleString();$('pvacc').style.background='conic-gradient(#4ade80 '+acc+'%,#33261a 0)';$('pvaccn').textContent=acc+'%';$('pvw').textContent=s.wins;$('pvls').textContent=s.losses;$('pvrc').textContent=s.races+' RACES';
  pick('pfv')}
 $('mpf').onclick=()=>profView();$('pvb').onclick=()=>pick('mm');$('pved').onclick=()=>openPF(1);
-profIcon();if(!prof)openPF(0);
+profIcon();
+// ===== Online accounts (Supabase). Until SB_URL and SB_KEY are filled in, the game keeps working with the phone-only profile. =====
+// Fill these two after creating your Supabase project (Project Settings > API): the project URL and the public "anon" key. The anon key is safe to put here.
+const SB_URL='https://wdqiiyohungqvtgltrqq.supabase.co',SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndkcWlpeW9odW5ncXZ0Z2x0cnFxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTIwMDU4OTgsImV4cCI6MjEwNzU4MTg5OH0.DTJZ4xGTITiZWRZsHGna_gkqNydjt8XoN2GL-AV-fus';
+var sb=null,cloudOn=false,authUser=null,legacyP=null,cachedP=null,pfOld=null,lgMode=0,csT=0,recov=0;
+if(SB_URL&&SB_KEY&&window.supabase){try{sb=window.supabase.createClient(SB_URL,SB_KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}});cloudOn=true;sb.auth.onAuthStateChange(ev=>{if(ev=='PASSWORD_RECOVERY'){recov=1;pick('lg');lgSet(2)}})}catch(e){}}
+const MAILRE=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+function toStats(p){return{xp:p.xp||0,races:p.st.races,wins:p.st.wins,losses:p.st.losses,answers:p.st.ans,correct:p.st.ok,best_score:p.st.best,top_speed:p.st.top}}
+function fromRows(r,v,u){return{uid:u.id,u:r.username,cc:r.country,uni:r.university,yr:r.year_of_study,bio:r.bio||'',av:r.avatar||0,ph:r.avatar_photo||'',em:u.email,tel:v?v.phone:'',consent:1,xp:r.xp||0,st:{ans:r.answers||0,ok:r.correct||0,races:r.races||0,wins:r.wins||0,losses:r.losses||0,best:r.best_score||0,top:r.top_speed||0}}}
+function saveDone(){try{localStorage.setItem('medDone',JSON.stringify(done))}catch(_){}}
+function cloudSave(){if(!cloudOn||!authUser||!prof)return;clearTimeout(csT);csT=setTimeout(async()=>{try{await sb.from('profiles').update(Object.assign(toStats(prof),{done_levels:done,updated_at:new Date().toISOString()})).eq('id',authUser.id)}catch(e){}},600)}
+async function cloudUpsert(p,isNew){const row={id:authUser.id,username:p.u,country:p.cc,university:p.uni,year_of_study:p.yr,bio:p.bio,avatar:p.av,avatar_photo:p.ph||null,updated_at:new Date().toISOString()};
+ if(isNew)Object.assign(row,toStats(p),{done_levels:done});
+ try{const r=await sb.from('profiles').upsert(row,{onConflict:'id'});if(r.error)return r.error.code=='23505'?'That username is taken. Try another one.':'Could not save: '+r.error.message;
+ const v=await sb.from('player_private').upsert({id:authUser.id,email:authUser.email,phone:p.tel,agreed_at:new Date().toISOString()},{onConflict:'id'});if(v.error)return 'Could not save contact details: '+v.error.message;return ''}
+ catch(e){return 'Could not connect. Check your internet and try again.'}}
+async function finishPF(){if(cloudOn&&authUser){const b=$('pfsv');b.disabled=true;const err=await cloudUpsert(prof,!pfEdit);b.disabled=false;if(err){prof=pfOld;$('pfe').textContent=err;return}prof.uid=authUser.id}
+ saveProf();profIcon();if(pfEdit)profView();else pick('menu')}
+function pfMail(){const e=$('pf_e');if(cloudOn&&authUser){e.value=authUser.email;e.readOnly=true}else e.readOnly=false}
+function lgMsg(t,ok){const e=$('lge');e.style.color=ok?'#4ade80':'#f87171';e.textContent=t}
+function authMsg(e){const m=(e&&e.message)||'';return /invalid login/i.test(m)?'Wrong email or password':/already (been )?registered/i.test(m)?'That email already has an account. Log in instead.':/not confirmed/i.test(m)?'Please confirm your email first, then log in.':/rate limit|too many/i.test(m)?'Too many attempts. Please wait a few minutes.':m||'Something went wrong'}
+function lgSet(m){lgMode=m;$('lgt0').classList.toggle('on',m==0);$('lgt1').classList.toggle('on',m==1);$('lgtabs').hidden=m==2;$('lgl_e').hidden=m==2;$('lgl_c').hidden=m==0;$('lgfg').hidden=m!=0;$('lgsv').textContent=['LOG IN','CREATE ACCOUNT','SET NEW PASSWORD'][m];$('lg_p').autocomplete=m==0?'current-password':'new-password';$('lgt').textContent=m==2?'CHOOSE A NEW PASSWORD':'WELCOME TO MEDATHON';lgMsg('',0)}
+$('lgt0').onclick=()=>lgSet(0);$('lgt1').onclick=()=>lgSet(1);
+$('lgsv').onclick=async()=>{const em=$('lg_e').value.trim(),pw=$('lg_p').value,pc=$('lg_c').value;
+ if(lgMode!=2&&!MAILRE.test(em))return lgMsg('Enter a valid email address');
+ if(lgMode==0&&!pw)return lgMsg('Enter your password');
+ if(lgMode!=0&&pw.length<8)return lgMsg('Password must be at least 8 characters');
+ if(lgMode!=0&&pw!==pc)return lgMsg('The two passwords do not match');
+ const b=$('lgsv');b.disabled=true;lgMsg('Please wait...',1);
+ try{let r;
+  if(lgMode==0){r=await sb.auth.signInWithPassword({email:em,password:pw});if(r.error)lgMsg(authMsg(r.error));else await afterLogin(r.data.user)}
+  else if(lgMode==1){r=await sb.auth.signUp({email:em,password:pw});if(r.error)lgMsg(authMsg(r.error));else if(r.data.session)await afterLogin(r.data.user);else{lgSet(0);lgMsg('Account created. Open the link we emailed you, then log in.',1)}}
+  else{r=await sb.auth.updateUser({password:pw});if(r.error)lgMsg(authMsg(r.error));else{recov=0;await afterLogin(r.data.user)}}
+ }catch(e){lgMsg('Could not connect. Check your internet and try again.')}
+ b.disabled=false};
+$('lgfg').onclick=async()=>{const em=$('lg_e').value.trim();if(!MAILRE.test(em))return lgMsg('Type your email above first');try{const r=await sb.auth.resetPasswordForEmail(em,{redirectTo:location.origin+location.pathname});lgMsg(r.error?authMsg(r.error):'If that email has an account, a reset link is on its way.',!r.error)}catch(e){lgMsg('Could not connect. Check your internet and try again.')}};
+async function afterLogin(user){authUser=user;let a,b;
+ try{const x=await Promise.all([sb.from('profiles').select('*').eq('id',user.id).maybeSingle(),sb.from('player_private').select('*').eq('id',user.id).maybeSingle()]);a=x[0];b=x[1]}catch(e){a={error:e}}
+ if(a.error){if(cachedP&&cachedP.uid==user.id){prof=cachedP;profIcon();optSync();pick('menu');return}authUser=null;pick('lg');lgSet(0);lgMsg('Could not load your profile. Check your internet and try again.');return}
+ if(a.data){prof=fromRows(a.data,b&&b.data,user);done=Array.from(new Set((done||[]).concat(a.data.done_levels||[]))).sort((x,y)=>x-y);saveProf();saveDone();buildTopics();profIcon();cloudSave();optSync();pick('menu')}
+ else{prof=legacyP&&!legacyP.uid?legacyP:null;openPF(0,prof)}}
+async function cloudBoot(){if(!cloudOn){if(!prof)openPF(0);return}
+ if(prof){if(prof.uid)cachedP=prof;else legacyP=prof;prof=null}
+ profIcon();pick('lg');lgSet(0);
+ let s=null;try{s=(await sb.auth.getSession()).data.session}catch(e){}
+ if(s&&s.user&&!recov)await afterLogin(s.user)}
+$('olg').onclick=async()=>{if(st=='race')quit();try{await sb.auth.signOut()}catch(e){}authUser=null;prof=null;cachedP=null;legacyP=null;done=[];try{localStorage.removeItem('medProfile');localStorage.removeItem('medDone')}catch(e){}buildTopics();profIcon();pick('lg');lgSet(0)};
+cloudBoot();
+
 function loop(ts){const raw=(ts-last)/1000||0;if(st=='race'&&g.ph=='run'&&!g.pz&&raw<.5&&dprMax>.75){fq.s+=raw;if(++fq.n>=150){if(fq.s/fq.n>.034){dprMax=dprMax>1?1:.75;rs()}fq.n=0;fq.s=0}}const dt=Math.min(.05,raw);last=ts;T=ts/1000;upd(dt);if(!((st=='race'&&g.pz)||st=='end')||dirty){draw();dirty=0}requestAnimationFrame(loop)}
 requestAnimationFrame(loop);
 (()=>{const t0=performance.now(),sf=$('sf'),sp=$('sp'),sc=$('splash');(function f(){const k=Math.min(1,(performance.now()-t0)/10000);sf.style.width=k*100+'%';sp.textContent=k<1?'Loading… '+Math.floor(k*100)+'%':'Ready!';if(k<1)requestAnimationFrame(f);else{sc.classList.add('out');setTimeout(()=>sc.remove(),700)}})()})();
