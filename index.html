@@ -213,6 +213,33 @@ input,select,textarea{-webkit-user-select:text;user-select:text}
 #lge{min-height:16px;font-size:12px;font-weight:700;color:#f87171}
 .lgl{background:none;border:0;color:#fbbf24;text-decoration:underline;font-size:12px;padding:4px}
 .pff input[readonly]{opacity:.65}
+
+.hero{background:linear-gradient(90deg,rgba(8,5,2,.9) 0,rgba(8,5,2,.55) 40%,rgba(8,5,2,.12) 72%,rgba(8,5,2,.3) 100%);flex-direction:row;justify-content:flex-end;align-items:center;padding:6px 4vw;overflow:hidden}
+.hero>:first-child{margin-top:0}.hero>:last-child{margin-bottom:0}
+.hbrand{position:absolute;left:5vw;top:8%;text-align:left;z-index:1}
+.hbrand b{display:block;font-size:26px;font-size:clamp(26px,9vh,54px);font-weight:900;font-style:italic;letter-spacing:3px;color:#fff;text-shadow:0 3px 14px #000,0 0 22px #f59e0b88}
+.hbrand small{display:block;margin-top:2px;font-size:11px;font-size:clamp(11px,3.2vh,17px);font-weight:700;letter-spacing:3px;color:#fbbf24;text-transform:uppercase;text-shadow:0 2px 6px #000}
+.hcar{position:absolute;left:2vw;bottom:4%;width:54vw;width:min(54vw,560px);height:auto;filter:drop-shadow(0 14px 16px #000b);z-index:1;pointer-events:none}
+.hcard{position:relative;z-index:2;width:330px;width:min(330px,46vw);max-height:calc(100% - 12px);overflow-y:auto;touch-action:pan-y;text-align:left;background:rgba(14,9,4,.8);border:1px solid #b4530988;border-radius:14px;padding:12px 14px;box-shadow:0 12px 40px #000c,inset 0 0 22px #f59e0b14}
+.hcard.wide{width:470px;width:min(470px,62vw)}
+.hcard>*{margin-bottom:8px}.hcard>:last-child{margin-bottom:0}
+.hcard label{font-size:10px;letter-spacing:1px;color:#d6a45a;font-weight:700;display:block}
+.hcard input[type=text],.hcard input[type=email],.hcard input[type=password],.hcard input[type=tel],.hcard select{width:100%;box-sizing:border-box;margin-top:2px;height:30px;height:clamp(30px,8.5vh,36px);background:#120b05;color:#fff;border:1px solid #7c4a12;border-radius:6px;padding:0 8px;font-size:16px}
+.hcard .pgo{width:100%;padding:9px 12px;font-size:15px}
+.hhead{display:flex;flex-direction:column}
+.hhead span{font-size:14px;font-size:clamp(14px,4vh,19px);font-weight:900;letter-spacing:2px;color:#fbbf24}
+.hhead small{font-size:10px;letter-spacing:1.5px;color:#d6a45a;margin-top:2px}
+.pfrow{display:flex;align-items:center}
+.hcard .pfav{width:52px;width:clamp(52px,16vh,70px);height:52px;height:clamp(52px,16vh,70px);margin:0 12px 0 0;flex:none}
+.pfside{flex:1;min-width:0}
+.hcard .pfh{display:flex;flex-wrap:wrap;margin-bottom:6px}.hcard .pfh>*{margin:0 4px 4px 0}
+.hcard .pfhb{width:26px;width:clamp(26px,7.5vh,34px);height:26px;height:clamp(26px,7.5vh,34px)}
+.pfx2{display:flex;align-items:center}
+.pfx2 #pfe{flex:1;color:#f87171;font-weight:700;font-size:11px;margin-right:8px}
+.pfx2 .pgo{width:auto;padding:8px 22px;font-size:14px}.pfx2 .pcl{margin-left:0;margin-right:8px}
+.hcard .lgtabs{margin-bottom:4px}
+.hcard .lgl{align-self:center;display:block;margin:0 auto}
+@media(max-width:640px){.hbrand{top:4%}.hbrand b{font-size:22px;letter-spacing:2px}.hbrand small{display:none}}
 </style><meta name="author" content="Eghuan Ventures"><meta name="copyright" content="© 2026 Eghuan Ventures. All rights reserved."><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0b1220"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="apple-touch-icon" href="icon-192.png"><link rel="icon" href="icon-192.png">
 <script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script><script defer src="/_vercel/insights/script.js"></script><script src="vendor/supabase.js"></script>
 </head><body>
@@ -235,17 +262,18 @@ input,select,textarea{-webkit-user-select:text;user-select:text}
 <button class="ar" id="cl">◀</button><canvas id="mc" width="560" height="300"></canvas><button class="ar" id="cr">▶</button><div id="cn"></div>
 <div class="gbl"><div class="tile"><small>WEATHER</small><div><button class="wc" data-e="day">☀️</button><button class="wc" data-e="night">🌙</button><button class="wc" data-e="rain">🌧️</button></div></div><button class="tile" id="gg"><span>🚘</span><small>GARAGE</small></button></div>
 <button id="play">PLAY&nbsp;▶</button><div hidden><button id="v1"></button><button id="v2"></button><div id="ks"></div></div></div>
-<div id="lg" class="scr pf" hidden><div class="pft" id="lgt">WELCOME TO MEDATHON</div><div class="lgb"><div class="lgtabs" id="lgtabs"><button type="button" class="tab on" id="lgt0">LOG IN</button><button type="button" class="tab" id="lgt1">CREATE ACCOUNT</button></div>
+<div id="lg" class="scr hero" hidden><div class="hbrand"><b>MEDATHON</b><small id="lgt">Welcome back, driver</small></div><img class="hcar" alt="">
+<div class="hcard"><div class="lgtabs" id="lgtabs"><button type="button" class="tab on" id="lgt0">LOG IN</button><button type="button" class="tab" id="lgt1">CREATE ACCOUNT</button></div>
 <label id="lgl_e">EMAIL<input type="email" id="lg_e" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false"></label><label id="lgl_p">PASSWORD<input type="password" id="lg_p" autocomplete="current-password"></label><label id="lgl_c" hidden>CONFIRM PASSWORD<input type="password" id="lg_c" autocomplete="new-password"></label>
 <div id="lge"></div><button class="pgo" id="lgsv">LOG IN</button><button type="button" class="lgl" id="lgfg">Forgot password?</button></div></div>
-<div id="pfc" class="scr pf" hidden><div class="pft" id="pfct">CREATE YOUR PROFILE</div>
-<div class="pfs"><div class="pfa"><div class="pfav" id="pfav"></div><div class="pfh" id="pfh"></div><label class="pfu">Upload photo<input type="file" id="pfp" accept="image/*" hidden></label></div>
-<div class="pff"><label>USERNAME<input type="text" id="pf_u" maxlength="16" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="e.g. Dr_Desert_Drift"></label><label>COUNTRY<select id="pf_c"></select></label>
-<label>UNIVERSITY / SCHOOL<input type="text" id="pf_n" maxlength="60" autocomplete="off"></label><label>YEAR OF STUDY<select id="pf_y"></select></label>
+<div id="pfc" class="scr hero" hidden><div class="hbrand"><b>MEDATHON</b><small>Your garage is waiting</small></div><img class="hcar" alt="">
+<div class="hcard wide"><div class="hhead"><span id="pfct">CREATE YOUR PROFILE</span><small id="pfstp"></small></div>
+<div id="pfs1"><div class="pfrow"><div class="pfav" id="pfav"></div><div class="pfside"><div class="pfh" id="pfh"></div><label class="pfu">Upload photo<input type="file" id="pfp" accept="image/*" hidden></label></div></div>
+<div class="pff pfgrid" style="margin-top:8px"><label>USERNAME<input type="text" id="pf_u" maxlength="16" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="e.g. Dr_Desert_Drift"></label><label>COUNTRY<select id="pf_c"></select></label><label class="wide">SHORT BIO (optional)<input type="text" id="pf_b" maxlength="80" autocomplete="off"></label></div></div>
+<div id="pfs2" hidden><div class="pff pfgrid"><label>UNIVERSITY / SCHOOL<input type="text" id="pf_n" maxlength="60" autocomplete="off"></label><label>YEAR OF STUDY<select id="pf_y"></select></label>
 <label>EMAIL<input type="email" id="pf_e" inputmode="email" autocomplete="off" autocapitalize="off"></label><label>PHONE NUMBER<input type="tel" id="pf_t" inputmode="tel" autocomplete="off"></label>
-<label class="wide">SHORT BIO (optional)<input type="text" id="pf_b" maxlength="80" autocomplete="off"></label>
-<label class="chk wide"><input type="checkbox" id="pf_k"><span>I agree that Medathon may contact me about updates. My details stay on this phone for now and are never shown on my public profile.</span></label></div></div>
-<div class="pfx"><span id="pfe"></span><button class="pgo" id="pfsv">START</button><button class="pcl" id="pfcn" hidden>CANCEL</button></div></div>
+<label class="chk wide"><input type="checkbox" id="pf_k"><span>I agree that Medathon may contact me about updates. My details are never shown on my public profile.</span></label></div></div>
+<div class="pfx2"><span id="pfe"></span><button class="pcl" id="pfcn" hidden>CANCEL</button><button class="pcl" id="pfbk" hidden>BACK</button><button class="pgo" id="pfnx">NEXT</button><button class="pgo" id="pfsv" hidden>START</button></div></div></div>
 <div id="pfv" class="scr pv" hidden><div class="pvh"><button class="gb" id="pvb">&#8249;</button><div class="pvt">PLAYER PROFILE</div><button class="pcl" id="pved">EDIT</button></div>
 <div class="pvs"><div class="pvid"><div class="pvav" id="pvav"></div><div class="pvin"><b id="pvu"></b><span id="pvbio"></span><span id="pvc"></span></div><div class="pvlv"><b id="pvl">1</b><small>LEVEL</small></div></div>
 <div class="pvg"><section class="pvp"><h4>PROGRESS &amp; REWARDS</h4><span class="pk">MEDICAL STANDING</span><div class="pn2" id="pvst"></div><span class="pk" style="margin-top:6px" id="pvyr"></span><div class="xb"><i id="pvxb"></i></div><span class="pk" id="pvxt"></span>
@@ -835,7 +863,7 @@ document.querySelectorAll('.pfhb').forEach(b=>{b.onclick=()=>{pfd.av=+b.dataset.
 $('pfp').onchange=e=>{const f=e.target.files&&e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>{const c=document.createElement('canvas');c.width=c.height=128;const x=c.getContext('2d'),s=Math.min(im.width,im.height);x.drawImage(im,(im.width-s)/2,(im.height-s)/2,s,s,0,0,128,128);pfd.ph=c.toDataURL('image/jpeg',.72);pfPrev()};im.src=r.result};r.readAsDataURL(f)};
 function openPF(edit,pre){pfEdit=edit;const p=edit?prof:(pre||{});pfd={av:p.av||0,ph:p.ph||''};$('pfct').textContent=edit?'EDIT PROFILE':'CREATE YOUR PROFILE';
  $('pf_u').value=p.u||'';$('pf_c').value=p.cc||'';$('pf_n').value=p.uni||'';$('pf_y').value=p.yr||'';$('pf_e').value=p.em||'';$('pf_t').value=p.tel||'';$('pf_b').value=p.bio||'';$('pf_k').checked=!!edit;
- $('pfe').textContent='';$('pfsv').textContent=edit?'SAVE':'START';$('pfcn').hidden=!edit;pfPrev();pfMail();pick('pfc')}
+ $('pfe').textContent='';$('pfsv').textContent=edit?'SAVE':'START';$('pfcn').hidden=!edit;pfPrev();pfMail();pfStep(1);pick('pfc')}
 $('pfsv').onclick=()=>{const v=id=>$(id).value.trim(),u=v('pf_u'),e=v('pf_e'),t=v('pf_t').replace(/[\s()-]/g,'');let m='',f='';
  if(!/^[A-Za-z0-9_]{3,16}$/.test(u)){m='Username: 3 to 16 letters, numbers or _';f='pf_u'}
  else if(!v('pf_c')){m='Choose your country';f='pf_c'}
@@ -844,7 +872,7 @@ $('pfsv').onclick=()=>{const v=id=>$(id).value.trim(),u=v('pf_u'),e=v('pf_e'),t=
  else if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(e)){m='Enter a valid email address';f='pf_e'}
  else if(!/^\+?\d{7,15}$/.test(t)){m='Enter a valid phone number';f='pf_t'}
  else if(!$('pf_k').checked){m='Please tick the agreement box';f='pf_k'}
- if(m){$('pfe').textContent=m;try{$(f).focus()}catch(_){}return}
+ if(m){$('pfe').textContent=m;pfStep(/^pf_(u|c)$/.test(f)?1:2);try{$(f).focus()}catch(_){}return}
  pfOld=prof;prof=Object.assign({xp:0,st:{ans:0,ok:0,races:0,wins:0,losses:0,best:0,top:0},created:Date.now()},prof||{},{u:u,cc:v('pf_c'),uni:v('pf_n'),yr:v('pf_y'),em:e,tel:t,bio:v('pf_b'),av:pfd.av,ph:pfd.ph,consent:1});
  finishPF()};
 $('pfcn').onclick=()=>profView();
@@ -876,7 +904,7 @@ async function finishPF(){if(cloudOn&&authUser){const b=$('pfsv');b.disabled=tru
 function pfMail(){const e=$('pf_e');if(cloudOn&&authUser){e.value=authUser.email;e.readOnly=true}else e.readOnly=false}
 function lgMsg(t,ok){const e=$('lge');e.style.color=ok?'#4ade80':'#f87171';e.textContent=t}
 function authMsg(e){const m=(e&&e.message)||'';return /invalid login/i.test(m)?'Wrong email or password':/already (been )?registered/i.test(m)?'That email already has an account. Log in instead.':/not confirmed/i.test(m)?'Please confirm your email first, then log in.':/rate limit|too many/i.test(m)?'Too many attempts. Please wait a few minutes.':m||'Something went wrong'}
-function lgSet(m){lgMode=m;$('lgt0').classList.toggle('on',m==0);$('lgt1').classList.toggle('on',m==1);$('lgtabs').hidden=m==2;$('lgl_e').hidden=m==2;$('lgl_c').hidden=m==0;$('lgfg').hidden=m!=0;$('lgsv').textContent=['LOG IN','CREATE ACCOUNT','SET NEW PASSWORD'][m];$('lg_p').autocomplete=m==0?'current-password':'new-password';$('lgt').textContent=m==2?'CHOOSE A NEW PASSWORD':'WELCOME TO MEDATHON';lgMsg('',0)}
+function lgSet(m){lgMode=m;$('lgt0').classList.toggle('on',m==0);$('lgt1').classList.toggle('on',m==1);$('lgtabs').hidden=m==2;$('lgl_e').hidden=m==2;$('lgl_c').hidden=m==0;$('lgfg').hidden=m!=0;$('lgsv').textContent=['LOG IN','CREATE ACCOUNT','SET NEW PASSWORD'][m];$('lg_p').autocomplete=m==0?'current-password':'new-password';$('lgt').textContent=m==2?'Choose a new password':m==1?'Join the race':'Welcome back, driver';lgMsg('',0)}
 $('lgt0').onclick=()=>lgSet(0);$('lgt1').onclick=()=>lgSet(1);
 $('lgsv').onclick=async()=>{const em=$('lg_e').value.trim(),pw=$('lg_p').value,pc=$('lg_c').value;
  if(lgMode!=2&&!MAILRE.test(em))return lgMsg('Enter a valid email address');
@@ -902,9 +930,15 @@ async function cloudBoot(){if(!cloudOn){if(!prof)openPF(0);return}
  let s=null;try{s=(await sb.auth.getSession()).data.session}catch(e){}
  if(s&&s.user&&!recov)await afterLogin(s.user)}
 $('olg').onclick=async()=>{if(st=='race')quit();try{await sb.auth.signOut()}catch(e){}authUser=null;prof=null;cachedP=null;legacyP=null;done=[];try{localStorage.removeItem('medProfile');localStorage.removeItem('medDone')}catch(e){}buildTopics();profIcon();pick('lg');lgSet(0)};
+function pfStep(n){$('pfs1').hidden=n!=1;$('pfs2').hidden=n!=2;$('pfnx').hidden=n!=1;$('pfsv').hidden=n!=2;$('pfbk').hidden=n!=2;$('pfcn').hidden=n!=1||!pfEdit;$('pfstp').textContent=n==1?'STEP 1 OF 2 \u00b7 YOUR DRIVER':'STEP 2 OF 2 \u00b7 YOUR DETAILS'}
+$('pfnx').onclick=()=>{const u=$('pf_u').value.trim();let m='';if(!/^[A-Za-z0-9_]{3,16}$/.test(u))m='Username: 3 to 16 letters, numbers or _';else if(!$('pf_c').value)m='Choose your country';if(m){$('pfe').textContent=m;return}$('pfe').textContent='';pfStep(2)};
+$('pfbk').onclick=()=>{$('pfe').textContent='';pfStep(1)};
+$('pfc').addEventListener('keydown',e=>{if(e.key=='Enter'&&e.target.tagName=='INPUT'&&e.target.type!='checkbox'){e.preventDefault();($('pfnx').hidden?$('pfsv'):$('pfnx')).click()}});
+$('lg').addEventListener('keydown',e=>{if(e.key=='Enter'&&e.target.tagName=='INPUT'){e.preventDefault();$('lgsv').click()}});
+document.querySelectorAll('.hcar').forEach(i=>{i.src=HERO});
 cloudBoot();
 
-function loop(ts){const raw=(ts-last)/1000||0;if(st=='race'&&g.ph=='run'&&!g.pz&&raw<.5&&dprMax>.75){fq.s+=raw;if(++fq.n>=150){if(fq.s/fq.n>.034){dprMax=dprMax>1?1:.75;rs()}fq.n=0;fq.s=0}}const dt=Math.min(.05,raw);last=ts;T=ts/1000;upd(dt);if(!((st=='race'&&g.pz)||st=='end')||dirty){draw();dirty=0}requestAnimationFrame(loop)}
+function loop(ts){const raw=(ts-last)/1000||0;if(st=='race'&&g.ph=='run'&&!g.pz&&raw<.5&&dprMax>.75){fq.s+=raw;if(++fq.n>=150){if(fq.s/fq.n>.034){dprMax=dprMax>1?1:.75;rs()}fq.n=0;fq.s=0}}const dt=Math.min(.05,raw);last=ts;T=ts/1000;if(st=='menu'&&(!$('lg').hidden||!$('pfc').hidden))g.dist=(g.dist||0)+dt*2.5;upd(dt);if(!((st=='race'&&g.pz)||st=='end')||dirty){draw();dirty=0}requestAnimationFrame(loop)}
 requestAnimationFrame(loop);
 (()=>{const t0=performance.now(),sf=$('sf'),sp=$('sp'),sc=$('splash');(function f(){const k=Math.min(1,(performance.now()-t0)/10000);sf.style.width=k*100+'%';sp.textContent=k<1?'Loading… '+Math.floor(k*100)+'%':'Ready!';if(k<1)requestAnimationFrame(f);else{sc.classList.add('out');setTimeout(()=>sc.remove(),700)}})()})();
 </script></body></html>
