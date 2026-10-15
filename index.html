@@ -240,6 +240,24 @@ input,select,textarea{-webkit-user-select:text;user-select:text}
 .hcard .lgtabs{margin-bottom:4px}
 .hcard .lgl{align-self:center;display:block;margin:0 auto}
 @media(max-width:640px){.hbrand{top:4%}.hbrand b{font-size:22px;letter-spacing:2px}.hbrand small{display:none}}
+
+.lbt,.lbf{display:flex;width:980px;width:min(980px,96vw)}
+.lbt .tab{flex:1;margin:0 3px 0 0;background:#1f1409;border:1px solid #7c4a12;color:#fbbf24;font-weight:800;letter-spacing:1px;font-size:11px;font-size:clamp(11px,3vh,15px);padding:6px 4px;border-radius:6px;text-transform:uppercase}
+.lbt .tab.on{background:linear-gradient(#b45309,#7c2d12);color:#fff;border-color:#fb923c}
+.lbf .chip{flex:0 0 auto;margin:0 6px 0 0;background:#140c05;border:1px solid #7c4a12;color:#d6a45a;font-weight:700;font-size:10px;font-size:clamp(10px,2.8vh,13px);padding:4px 12px;border-radius:14px;letter-spacing:1px}
+.lbf .chip.on{background:#7c2d12;color:#fff;border-color:#fb923c}
+.lbl{width:980px;width:min(980px,96vw);flex:1 1 0;min-height:0;overflow-y:auto;touch-action:pan-y;border:1px solid #b4530977;border-radius:8px;background:rgba(20,12,6,.66);text-align:left}
+.lbr{display:flex;align-items:center;padding:4px 10px 4px 4px;border-bottom:1px solid #3b2a14;min-height:36px}
+.lbr.me{background:rgba(251,146,60,.2);box-shadow:inset 3px 0 0 #fb923c}
+.lbk{width:38px;font-weight:900;color:#d6a45a;text-align:center;flex:none;font-size:15px}
+.lbk.g1{color:#fbbf24}.lbk.g2{color:#e5e7eb}.lbk.g3{color:#d97706}
+.lba{width:30px;height:30px;border-radius:50%;overflow:hidden;flex:none;margin:0 8px;border:2px solid #7c4a12}
+.lba svg{width:100%;height:100%;display:block}
+.lbn{flex:1;min-width:0}.lbn b{display:block;color:#fff;font-size:14px}.lbn small{display:block;color:#bfa57d;font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lbx{width:70px;text-align:right;flex:none}.lbx b{display:block;color:#fff;font-size:14px}.lbx small{font-size:9px;letter-spacing:1px;color:#d6a45a}
+.lbmsg{padding:18px;text-align:center;color:#bfa57d;font-size:13px}
+.lbme{width:980px;width:min(980px,96vw);text-align:center;font-weight:900;letter-spacing:1px;color:#fbbf24;font-size:12px;font-size:clamp(12px,3.4vh,16px);background:rgba(124,45,18,.5);border:1px solid #fb923c;border-radius:8px;padding:6px}
+#menu .cur{cursor:pointer}
 </style><meta name="author" content="Eghuan Ventures"><meta name="copyright" content="© 2026 Eghuan Ventures. All rights reserved."><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0b1220"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="apple-touch-icon" href="icon-192.png"><link rel="icon" href="icon-192.png">
 <script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script><script defer src="/_vercel/insights/script.js"></script><script src="vendor/supabase.js"></script>
 </head><body>
@@ -250,7 +268,7 @@ input,select,textarea{-webkit-user-select:text;user-select:text}
 <div id="pad" hidden>
 <div id="pl"><button class="b" id="bt">TILT<br>off</button><div id="wheel" aria-label="Steering wheel"><svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="86" fill="none" stroke="#141416" stroke-width="22"/><circle cx="100" cy="100" r="86" fill="none" stroke="#4b4b52" stroke-width="3" stroke-dasharray="3 6"/><rect x="96" y="6" width="8" height="22" rx="2" fill="#ef4444"/><path d="M26 110 L174 110 L162 132 L38 132Z" fill="#d4d4d8"/><path d="M86 128 L114 128 L122 178 L78 178Z" fill="#d4d4d8"/><rect x="46" y="114" width="18" height="12" rx="3" fill="#27272a"/><rect x="136" y="114" width="18" height="12" rx="3" fill="#27272a"/><circle cx="100" cy="108" r="27" fill="#18181b" stroke="#f4f4f5" stroke-width="5"/></svg></div></div>
 <div id="pr"><div class="pedal" id="bb" aria-label="Brake"></div><div class="pedal" id="bg" aria-label="Gas"></div></div></div>
-<div id="menu" class="scr sc2"><div class="ttl"><img class="hi2" id="th" alt=""><span>MEDATHON</span></div><p>Select a mode</p><div class="pn" id="mp"></div><div class="fr"><p class="ft2" id="msg">Select a mode and enjoy learning while you race. New modes are coming soon.</p><img class="brand" alt="Eghuan Ventures" draggable="false"></div><div class="cur">🏆 <b class="bsv">0</b></div></div>
+<div id="menu" class="scr sc2"><div class="ttl"><img class="hi2" id="th" alt=""><span>MEDATHON</span></div><p>Select a mode</p><div class="pn" id="mp"></div><div class="fr"><p class="ft2" id="msg">Select a mode and enjoy learning while you race. New modes are coming soon.</p><img class="brand" alt="Eghuan Ventures" draggable="false"></div><div class="cur">🏆 <b class="bsv">0</b> <small style="font-size:10px;letter-spacing:1px;color:#d6a45a">RANKS &#8250;</small></div></div>
 <div id="topics" class="scr sc2" hidden><div class="ttl">CAREER · CHOOSE A TOPIC</div><div class="pn" id="tc"></div><p class="ft2" id="msg3">Pick a topic to enter its garage. Finish a topic to unlock the next one.</p><button class="bk" id="tb">◀</button></div>
 <div id="options" class="scr go2" hidden><div class="gh"><button class="gb" id="ob">‹</button><div class="gt">GAME OPTIONS</div></div>
 <div class="tabs"><button class="tab" type="button">Medathon Connect</button><button class="tab on" type="button">Game Settings</button><button class="tab" type="button">Game Info</button></div>
@@ -258,7 +276,7 @@ input,select,textarea{-webkit-user-select:text;user-select:text}
 <div class="tp" id="op1"><div class="wg"><button class="wb" id="osn"></button><button class="wb" id="ovo"></button><button class="wb" id="omu"></button><button class="wb" id="fsm">⛶ Fullscreen</button><button class="wb" id="inst" hidden>📲 Install app</button><button class="wb" id="olg" hidden>Log out</button><button class="wb" id="opn" hidden>↗ Open full page</button></div><p class="ft2" id="mst"></p><p class="ft2" id="msg2"></p></div>
 <div class="tp" id="op2" hidden><p class="how">Hold the long pedal (GAS) and steer with the wheel so you drive under the floating answer you think is right. Stay above 72 km/h or you won't reach the answers before the timer ends. Each level has a time limit (3 minutes for Intro to Anatomy, 5 minutes for the next levels) and more than 5 wrong answers ends it early. Turn your sound on for voice questions and play with your phone in landscape.</p></div>
 <div class="fr"><img class="brand" alt="Eghuan Ventures" draggable="false"><span class="ft2">© 2026 Eghuan Ventures. All rights reserved.</span></div></div>
-<div id="mm" class="scr gar" hidden><div class="gtop"><div class="gl"><button class="bk" id="mb">◀</button><div><b class="mt">MAIN MENU</b><small id="tp"></small></div></div><div class="stat"><span>🏆 Best <b class="bsv">0</b></span><span>⏱ <b id="tl">5:00</b> race</span></div><div class="gtr"><button class="bk" id="mpf" aria-label="Profile"></button><button class="bk" id="mo">⚙️</button></div></div>
+<div id="mm" class="scr gar" hidden><div class="gtop"><div class="gl"><button class="bk" id="mb">◀</button><div><b class="mt">MAIN MENU</b><small id="tp"></small></div></div><div class="stat"><span>🏆 Best <b class="bsv">0</b></span><span>⏱ <b id="tl">5:00</b> race</span></div><div class="gtr"><button class="bk" id="mlb" aria-label="Leaderboard">🏆</button><button class="bk" id="mpf" aria-label="Profile"></button><button class="bk" id="mo">⚙️</button></div></div>
 <button class="ar" id="cl">◀</button><canvas id="mc" width="560" height="300"></canvas><button class="ar" id="cr">▶</button><div id="cn"></div>
 <div class="gbl"><div class="tile"><small>WEATHER</small><div><button class="wc" data-e="day">☀️</button><button class="wc" data-e="night">🌙</button><button class="wc" data-e="rain">🌧️</button></div></div><button class="tile" id="gg"><span>🚘</span><small>GARAGE</small></button></div>
 <button id="play">PLAY&nbsp;▶</button><div hidden><button id="v1"></button><button id="v2"></button><div id="ks"></div></div></div>
@@ -274,6 +292,10 @@ input,select,textarea{-webkit-user-select:text;user-select:text}
 <label>EMAIL<input type="email" id="pf_e" inputmode="email" autocomplete="off" autocapitalize="off"></label><label>PHONE NUMBER<input type="tel" id="pf_t" inputmode="tel" autocomplete="off"></label>
 <label class="chk wide"><input type="checkbox" id="pf_k"><span>I agree that Medathon may contact me about updates. My details are never shown on my public profile.</span></label></div></div>
 <div class="pfx2"><span id="pfe"></span><button class="pcl" id="pfcn" hidden>CANCEL</button><button class="pcl" id="pfbk" hidden>BACK</button><button class="pgo" id="pfnx">NEXT</button><button class="pgo" id="pfsv" hidden>START</button></div></div></div>
+<div id="lb" class="scr pv" hidden><div class="pvh"><button class="gb" id="lbb">&#8249;</button><div class="pvt">LEADERBOARD</div><button class="pcl" id="lbr">REFRESH</button></div>
+<div class="lbt"><button class="tab on" data-k="xp" type="button">Ranked by XP</button><button class="tab" data-k="best_score" type="button">Ranked by best score</button></div>
+<div class="lbf"><button class="chip on" data-f="all" type="button">ALL PLAYERS</button><button class="chip" data-f="country" type="button">MY COUNTRY</button><button class="chip" data-f="school" type="button">MY SCHOOL</button></div>
+<div class="lbl" id="lbl"></div><div class="lbme" id="lbme"></div></div>
 <div id="pfv" class="scr pv" hidden><div class="pvh"><button class="gb" id="pvb">&#8249;</button><div class="pvt">PLAYER PROFILE</div><button class="pcl" id="pved">EDIT</button></div>
 <div class="pvs"><div class="pvid"><div class="pvav" id="pvav"></div><div class="pvin"><b id="pvu"></b><span id="pvbio"></span><span id="pvc"></span></div><div class="pvlv"><b id="pvl">1</b><small>LEVEL</small></div></div>
 <div class="pvg"><section class="pvp"><h4>PROGRESS &amp; REWARDS</h4><span class="pk">MEDICAL STANDING</span><div class="pn2" id="pvst"></div><span class="pk" style="margin-top:6px" id="pvyr"></span><div class="xb"><i id="pvxb"></i></div><span class="pk" id="pvxt"></span>
@@ -514,7 +536,7 @@ addEventListener('keydown',e=>{if(e.target&&/^(INPUT|SELECT|TEXTAREA)$/.test(e.t
 addEventListener('contextmenu',e=>{if(!(e.target&&/^(INPUT|TEXTAREA)$/.test(e.target.tagName)))e.preventDefault()});document.addEventListener('click',()=>{const a=document.activeElement;a&&a.blur&&!/^(INPUT|SELECT|TEXTAREA)$/.test(a.tagName)&&a.blur()});
 document.addEventListener('visibilitychange',()=>{if(document.hidden)pz(1)});
 let tOn=0;$('bt').onclick=async()=>{if(!tOn){try{if(window.DeviceOrientationEvent&&DeviceOrientationEvent.requestPermission&&await DeviceOrientationEvent.requestPermission()!='granted')return;addEventListener('deviceorientation',e=>{const a=(screen.orientation&&screen.orientation.angle)||0;tv=cl((a==90?e.beta:a==270?-e.beta:e.gamma)/22,-1,1)});tOn=1}catch(_){return}}tilt=!tilt;$('bt').innerHTML='TILT<br>'+(tilt?'on':'off')};
-function start(){mus.ri++;mus.sv=null;runTop=0;try{const d=document.documentElement;(d.requestFullscreen?d.requestFullscreen():Promise.reject()).then(()=>screen.orientation.lock('landscape')).catch(()=>{})}catch(_){}snd.ctx();wr=0;wh=0;if(SS){SS.cancel();const u=new SpeechSynthesisUtterance(' ');u.volume=0;SS.speak(u)}g={ph:'cd',cd:3.99,t:0,qi:0,qs:0,sc:0,px:1.5,sp:.4,sm:0,dist:0,J:L+CAR_Z,old:null,mx:null,miss:[],fb:'',ft:0,pz:0,ln:0,deck:shuf(TOPICS[topic].q.slice())};$('ft').textContent='';gameManager.timeLimit=TOPICS[topic].time;gameManager.reset();roadSpawner.reset(g.dist);st='race';['menu','topics','options','mm','envs','cars','pfc','pfv','lg','end','pause'].forEach(i=>$(i).hidden=true);$('hud').hidden=$('pad').hidden=false;$('qb').hidden=true}
+function start(){mus.ri++;mus.sv=null;runTop=0;try{const d=document.documentElement;(d.requestFullscreen?d.requestFullscreen():Promise.reject()).then(()=>screen.orientation.lock('landscape')).catch(()=>{})}catch(_){}snd.ctx();wr=0;wh=0;if(SS){SS.cancel();const u=new SpeechSynthesisUtterance(' ');u.volume=0;SS.speak(u)}g={ph:'cd',cd:3.99,t:0,qi:0,qs:0,sc:0,px:1.5,sp:.4,sm:0,dist:0,J:L+CAR_Z,old:null,mx:null,miss:[],fb:'',ft:0,pz:0,ln:0,deck:shuf(TOPICS[topic].q.slice())};$('ft').textContent='';gameManager.timeLimit=TOPICS[topic].time;gameManager.reset();roadSpawner.reset(g.dist);st='race';['menu','topics','options','mm','envs','cars','pfc','pfv','lg','lb','end','pause'].forEach(i=>$(i).hidden=true);$('hud').hidden=$('pad').hidden=false;$('qb').hidden=true}
 function newQ(){g.q=g.deck[g.qi%g.deck.length];g.o=shuf([0,1,2,3]);g.cl=g.o.indexOf(0);g.qs=g.t;$('qt').textContent=g.q[0];say(g.fb+' '+g.q[0],1);g.fb=''}
 function toast(t,c){$('ft').textContent=t;$('ft').style.color=c;g.ft=1.6}
 function ev(ok,pts,slow){snd.sfx(slow?'slow':ok?'ok':'bad');gameManager.record(ok);
@@ -742,7 +764,7 @@ const CARS=['HyperSTUFF Blue','Desert Classic'];
 function mdiag(){const el=$('mst');if(!el)return;const a=mus.a,f=a.src.split('/').pop();let t;if(!mus.on)t='Music is switched off.';else if(!/^https?:/.test(document.baseURI)&&!MUSIC_BASE)t='This game is running inside an embed that has no web address of its own, so it cannot find the music files. Open the game from its Vercel link instead.';else if(a.error)t=`Can't load ${f} (error ${a.error.code}). The file may be missing or blocked.`;else if(!a.paused)t='Playing '+f+'.';else if(mus.err==='NotAllowedError')t='Your phone is blocking sound. Tap anywhere to start it.';else t='Waiting to start…';el.textContent='🎵 '+t+' '+mus.http}
 function mchk(){Promise.all(Object.values(mus.T).flat().map(async c=>{for(const u of c){try{const r=await fetch(MUSIC_BASE+u,{method:'HEAD',mode:MUSIC_BASE?'no-cors':'same-origin'});if(r.type=='opaque'||r.ok)return c[0].replace('music/','').replace('.mp3','')+': found'+(u.startsWith('music/')?'':' in main folder')}catch(_){}}return c[0].replace('music/','').replace('.mp3','')+': NOT FOUND (404)'})).then(r=>{mus.http='('+r.join(' · ')+')'})}
 setInterval(mdiag,600);
-function pick(id){if(id=='options')mchk();['menu','topics','options','mm','envs','cars','pfc','pfv','lg'].forEach(i=>$(i).hidden=i!=id);if(id=='cars')drawPrev();if(id=='mm'){wcSync();drawStage();profIcon();$('tp').textContent=KS[topic];const tt=TOPICS[topic].time;$('tl').textContent=Math.floor(tt/60)+':'+String(tt%60).padStart(2,'0')}document.querySelectorAll('.bsv').forEach(e=>e.textContent=best);optSync()}
+function pick(id){if(id=='options')mchk();['menu','topics','options','mm','envs','cars','pfc','pfv','lg','lb'].forEach(i=>$(i).hidden=i!=id);if(id=='cars')drawPrev();if(id=='mm'){wcSync();drawStage();profIcon();$('tp').textContent=KS[topic];const tt=TOPICS[topic].time;$('tl').textContent=Math.floor(tt/60)+':'+String(tt%60).padStart(2,'0')}document.querySelectorAll('.bsv').forEach(e=>e.textContent=best);optSync()}
 function mkSpr(){if(!spr){spr=document.createElement('canvas');spr.width=760;spr.height=480;const c=spr.getContext('2d');c.translate(380,240);c.scale(2,2);carArt(c)}}
 function drawPrev(){CARS.forEach((n,i)=>{const e=$('cp'+i);if(!e)return;const x=e.getContext('2d');x.clearRect(0,0,240,160);let im=carImg;if(i||!carImg.naturalWidth){mkSpr();im=spr}const iw=im.naturalWidth||im.width,ih=im.naturalHeight||im.height,k=Math.min(228/iw,148/ih);x.drawImage(im,(240-iw*k)/2,(160-ih*k)/2,iw*k,ih*k)})}
 [['day','☀️','Day'],['night','🌙','Night'],['rain','🌧️','Rain']].forEach(([k,e,n])=>{const b=document.createElement('button');b.className='card';b.innerHTML=`<span style="font-size:48px">${e}</span>${n}`;b.onclick=()=>{env=k;dirty=1;pick('cars')};$('ec').append(b)});
@@ -936,6 +958,25 @@ $('pfbk').onclick=()=>{$('pfe').textContent='';pfStep(1)};
 $('pfc').addEventListener('keydown',e=>{if(e.key=='Enter'&&e.target.tagName=='INPUT'&&e.target.type!='checkbox'){e.preventDefault();($('pfnx').hidden?$('pfsv'):$('pfnx')).click()}});
 $('lg').addEventListener('keydown',e=>{if(e.key=='Enter'&&e.target.tagName=='INPUT'){e.preventDefault();$('lgsv').click()}});
 document.querySelectorAll('.hcar').forEach(i=>{i.src=HERO});
+// ===== Leaderboard =====
+var lbFrom='menu',lbKey='xp',lbFil='all',lbBusy=0;
+const esc=t=>String(t==null?'':t).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function openLB(from){lbFrom=from||'menu';lbKey='xp';lbFil='all';document.querySelectorAll('#lb .tab').forEach((x,i)=>x.classList.toggle('on',i==0));document.querySelectorAll('#lb .chip').forEach((x,i)=>x.classList.toggle('on',i==0));pick('lb');lbLoad()}
+document.querySelectorAll('#lb .tab').forEach(b=>{b.onclick=()=>{lbKey=b.dataset.k;document.querySelectorAll('#lb .tab').forEach(x=>x.classList.toggle('on',x==b));lbLoad()}});
+document.querySelectorAll('#lb .chip').forEach(b=>{b.onclick=()=>{lbFil=b.dataset.f;document.querySelectorAll('#lb .chip').forEach(x=>x.classList.toggle('on',x==b));lbLoad()}});
+$('lbb').onclick=()=>pick(lbFrom);$('lbr').onclick=()=>lbLoad();$('mlb').onclick=()=>openLB('mm');document.querySelector('#menu .cur').onclick=()=>openLB('menu');
+function lbApply(q){if(lbFil=='country')q=q.eq('country',prof.cc);else if(lbFil=='school')q=q.ilike('university',prof.uni.trim().replace(/[\\%_]/g,'\\$&'));return q}
+async function lbLoad(){const L=$('lbl'),M=$('lbme');
+ if(!cloudOn||!authUser||!prof){L.innerHTML='<div class="lbmsg">The leaderboard needs an online account. Log in to see how you rank.</div>';M.textContent='';return}
+ L.innerHTML='<div class="lbmsg">Loading...</div>';M.textContent='';const my=lbKey=='xp'?prof.xp:prof.st.best,tk=++lbBusy;
+ try{const r=await lbApply(sb.from('profiles').select('id,username,country,university,xp,best_score,avatar').order(lbKey,{ascending:false}).order('created_at',{ascending:true}).limit(50));
+  const c=await lbApply(sb.from('profiles').select('id',{count:'exact',head:true}).gt(lbKey,my));
+  if(tk!=lbBusy)return;if(r.error)throw r.error;const rows=r.data||[];let rk=1;
+  L.innerHTML=rows.length?rows.map((p,i)=>{if(i>0&&p[lbKey]!=rows[i-1][lbKey])rk=i+1;const you=p.id==authUser.id;
+   return '<div class="lbr'+(you?' me':'')+'"><span class="lbk'+(rk<4?' g'+rk:'')+'">'+rk+'</span><span class="lba">'+helm(p.avatar||0)+'</span><span class="lbn"><b>'+esc(p.username)+(you?' (you)':'')+'</b><small>'+flag(p.country)+' '+esc(cname(p.country))+' \u00b7 '+esc(p.university)+'</small></span><span class="lbx"><b>'+(p.xp||0).toLocaleString()+'</b><small>XP</small></span><span class="lbx"><b>'+(p.best_score||0).toLocaleString()+'</b><small>BEST</small></span></div>'}).join(''):'<div class="lbmsg">No players here yet. Be the first!</div>';
+  M.textContent='YOUR RANK: #'+((c.count||0)+1).toLocaleString()+' \u00b7 '+my.toLocaleString()+(lbKey=='xp'?' XP':' BEST SCORE')}
+ catch(e){if(tk==lbBusy)L.innerHTML='<div class="lbmsg">Could not load the leaderboard. Check your internet and try again.</div>'}}
+
 cloudBoot();
 
 function loop(ts){const raw=(ts-last)/1000||0;if(st=='race'&&g.ph=='run'&&!g.pz&&raw<.5&&dprMax>.75){fq.s+=raw;if(++fq.n>=150){if(fq.s/fq.n>.034){dprMax=dprMax>1?1:.75;rs()}fq.n=0;fq.s=0}}const dt=Math.min(.05,raw);last=ts;T=ts/1000;if(st=='menu'&&(!$('lg').hidden||!$('pfc').hidden))g.dist=(g.dist||0)+dt*2.5;upd(dt);if(!((st=='race'&&g.pz)||st=='end')||dirty){draw();dirty=0}requestAnimationFrame(loop)}
